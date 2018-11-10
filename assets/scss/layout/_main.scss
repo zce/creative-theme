@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the main of the site/application.
+// -----------------------------------------------------------------------------
+
+.site-main {
+  position: relative;
+}
+
+.site-section {
+  padding: (spacer(5) * 2) 0;
+  // background: no-repeat fixed center / cover;
+
+  &:nth-child(2n) {
+    background-color: color('white');
+  }
+
+  header {
+    text-align: center;
+
+    @include inner;
+
+    h2 {
+      font-size: $h1-font-size;
+    }
+
+    p {
+      @extend %lead;
+    }
+  }
+
+  footer {
+    padding: spacer(3);
+    text-align: center;
+
+    a {
+      @include button-size($btn-padding-y-lg, ($btn-padding-x-lg * 2.5), $font-size-lg, $btn-line-height-lg, 2rem);
+    }
+  }
+}

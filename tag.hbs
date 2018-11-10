@@ -1,0 +1,31 @@
+{{!< default}}
+
+{{#tag}}
+{{#contentFor 'header'}}
+<div class="site-heading container">
+  <h1 class="tag-name">{{name}}</h1>
+  {{#if description}}
+  <p class="tag-description">{{description}}</p>
+  {{else}}
+  <p class="tag-description">{{plural ../pagination.total empty=(t 'No posts') singular=(t '% post') plural=(t '% posts')}}</p>
+  {{/if}}
+</div>
+{{> site-cover}}
+{{/contentFor}}
+{{/tag}}
+
+<div class="container">
+  <div class="post-feed">
+    {{#foreach posts}}
+    {{> post-card characters=80}}
+    {{/foreach}}
+  </div>
+
+  <div class="pagination">
+    {{pagination}}
+  </div>
+</div>
+
+{{#contentFor 'scripts'}}
+<script src="{{asset 'dist/infinite.js'}}"></script>
+{{/contentFor}}

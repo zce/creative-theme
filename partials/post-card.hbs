@@ -1,0 +1,35 @@
+<article class="post-card">
+  <figure class="post-card-figure">
+    <a href="{{url}}" title="{{title}}">
+      {{#if feature_image}}<img src="{{asset 'img/holder.svg'}}" alt="{{title}}" data-src="{{feature_image}}" />{{else}}{{> svgs/thumbnail text=title}}{{/if}}
+    </a>
+  </figure>
+  <div class="post-card-body">
+    <a href="{{url}}" class="post-card-link"></a>
+    {{#primary_tag}}
+    <span class="post-card-tag">{{name}}</span>
+    {{else}}
+    <span class="post-card-tag">{{t 'Untagged'}}</span>
+    {{/primary_tag}}
+    <h3 class="post-card-title">{{title}}</h3>
+    {{#if words}}
+    <p class="post-card-excerpt">{{excerpt words=words}}{{t '...'}}</p>
+    {{else if characters}}
+    <p class="post-card-excerpt">{{excerpt characters=characters}}{{t '...'}}</p>
+    {{/if}}
+    <div class="post-card-meta">
+      <ul class="post-card-authors">
+        {{#foreach authors}}
+        <li>
+          <a href="{{url}}" title="{{name}}">
+            <img src="{{#if profile_image}}{{profile_image}}{{else}}{{asset 'img/avatar.svg'}}{{/if}}" alt="{{name}}" />
+          </a>
+        </li>
+        {{/foreach}}
+      </ul>
+      <small class="post-card-reading-time">
+        {{reading_time minute=(t '1 min read') minutes=(t '% min read')}}
+      </small>
+    </div>
+  </div>
+</article>

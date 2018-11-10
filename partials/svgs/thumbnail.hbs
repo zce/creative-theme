@@ -1,0 +1,14 @@
+{{!--
+
+# Thumbnail Placeholder
+
+## Props
+
+- class: svg class name, default: 'thumbnail'
+- text:  svg content text, default: 'NO IMAGE'
+
+ --}}
+{{!-- data:image/svg+xml,{{encode '<svg xmlns="http://www.w3.org/2000/svg"><text text-anchor="middle" x="50%" y="50%" fill="rgba(236, 238, 239, .5)" font-size="6vw">'}}{{text}}{{encode '</text></svg>'}} --}}
+<svg class="{{#if class}}{{class}}{{else}}thumbnail{{/if}}" xmlns="http://www.w3.org/2000/svg">
+  <text text-anchor="middle" x="50%" y="50%" font-size="3em">{{#if text}}{{text}}{{else}}NO IMAGE{{/if}}</text>
+</svg>

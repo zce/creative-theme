@@ -1,0 +1,24 @@
+{{!< default}}
+
+{{#contentFor 'header'}}
+<div class="site-heading container">
+  <h1 class="site-title">{{meta_title page=(t ' (Page %)')}}</h1>
+</div>
+{{> site-cover}}
+{{/contentFor}}
+
+<div class="container">
+  <div class="post-feed">
+    {{#foreach posts}}
+    {{> post-card characters=80}}
+    {{/foreach}}
+  </div>
+
+  <div class="pagination">
+    {{pagination}}
+  </div>
+</div>
+
+{{#contentFor 'scripts'}}
+<script src="{{asset 'dist/infinite.js'}}"></script>
+{{/contentFor}}

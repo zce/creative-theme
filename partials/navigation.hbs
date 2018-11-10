@@ -1,0 +1,21 @@
+{{!-- https://github.com/TryGhost/Ghost/blob/master/core/server/helpers/tpl/navigation.hbs --}}
+<ul class="navbar-nav" role="menu">
+  {{#foreach navigation}}
+  {{#has slug='archive'}}
+  <li class="nav-item nav-{{slug}} dropdown{{#if current}} active{{/if}}" role="menuitem">
+    <a class="nav-link dropdown-toggle" href="{{url absolute=true}}" data-toggle="dropdown"{{#if current}} aria-current="page"{{/if}}>{{t label}}</a>
+    {{#get 'tags'}}
+    <div class="dropdown-menu">
+      {{#foreach tags}}
+      <a class="dropdown-item" href="{{url}}">{{name}}</a>
+      {{/foreach}}
+    </div>
+    {{/get}}
+  </li>
+  {{else}}
+  <li class="nav-item nav-{{slug}}{{#if current}} active{{/if}}" role="menuitem">
+    <a class="nav-link" href="{{url absolute=true}}"{{#if current}} aria-current="page"{{/if}}>{{t label}}</a>
+  </li>
+  {{/has}}
+  {{/foreach}}
+</ul>

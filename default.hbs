@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+
+  <meta charset="UTF-8" />
+  {{!-- TODO: Discourage search engines from indexing this site --}}
+  <meta name="robots" content="noindex,follow" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>{{#block 'title'}}{{meta_title page=(t ' (Page %)')}}{{/block}}</title>
+
+  <link rel="stylesheet" type="text/css" href="{{asset 'dist/style.css'}}" />
+
+  {{{block 'styles'}}}
+
+  {{ghost_head}}
+
+</head>
+
+<body class="{{#block 'class'}}{{body_class}}{{/block}}{{block 'special_class'}}">
+
+  <div class="site-preloader"></div>
+
+  <a class="site-skiplink" href="#main">{{t 'Skip to main content'}}</a>
+
+  {{> site-header}}
+
+  <main class="site-main" id="main">{{{body}}}</main>
+
+  {{> site-footer}}
+
+  <script src="https://unpkg.com/jquery"></script>
+  <script src="https://unpkg.com/popper.js"></script>
+  <script src="https://unpkg.com/bootstrap"></script>
+  <script src="{{asset 'dist/global.js'}}"></script>
+
+  {{{block 'scripts'}}}
+
+  {{ghost_foot}}
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the error page.
+// -----------------------------------------------------------------------------
+
+.error-template {
+  .site-title {
+    font-weight: $display1-weight;
+    font-size: ($display1-size * 1.5);
+  }
+
+  .site-description {
+    margin-bottom: spacer(5);
+    font-size: ($lead-font-size * 1.5);
+  }
+}

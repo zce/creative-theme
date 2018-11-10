@@ -1,0 +1,102 @@
+{{!< default}}
+
+{{#contentFor 'header'}}
+<div class="site-heading container">
+  <h1 class="site-title">{{@blog.title}}</h1>
+  <p class="site-description">{{@blog.description}}</p>
+</div>
+{{> site-cover}}
+{{/contentFor}}
+
+{{#get 'posts' filter='featured:true' limit=1 as |featured|}}
+{{#featured}}
+<section class="site-section">
+  <div class="container">
+    <article class="post-primary" role="main">
+      <figure class="post-primary-figure">
+        <a href="{{url}}"><img src="{{feature_image}}" alt="{{title}}" /></a>
+      </figure>
+      <div class="post-primary-body">
+        <h2 class="post-primary-title">{{title}}</h2>
+        <div class="post-primary-content">{{content}}</div>
+        <a class="btn btn-outline-secondary" href="{{url}}">{{t 'Continue reading →'}}</a>
+      </div>
+    </article>
+  </div>
+</section>
+{{/featured}}
+{{/get}}
+
+<section class="site-section">
+  <div class="container">
+    <header>
+      <h2>{{t 'Latest Posts'}}</h2>
+      <p>{{t 'Keep the dots in your life.'}}</p>
+    </header>
+    <div class="post-feed">
+      {{#foreach posts}}
+      {{> post-card characters=40}}
+      {{/foreach}}
+    </div>
+    <footer>
+      <a class="btn btn-outline-secondary" href="{{page_url pagination.next}}">{{t 'Find more »'}}</a>
+    </footer>
+  </div>
+</section>
+
+{{#get 'posts' filter='featured:true' limit=1 page=2 as |featured|}}
+{{#featured}}
+<section class="site-section">
+  <div class="container">
+    <article class="post-primary">
+      <figure class="post-primary-figure">
+        <a href="{{url}}"><img src="{{feature_image}}" alt="{{title}}" /></a>
+      </figure>
+      <div class="post-primary-body">
+        <h2 class="post-primary-title">{{title}}</h2>
+        <div class="post-primary-content">{{content}}</div>
+        <a class="btn btn-outline-secondary" href="{{url}}">{{t 'Continue reading →'}}</a>
+      </div>
+    </article>
+  </div>
+</section>
+{{/featured}}
+{{/get}}
+
+{{#get 'posts' filter='primary_tag:tutorial' include='tags' limit=6}}
+{{#if posts}}
+<section class="site-section">
+  <div class="container">
+    {{#posts.[0].primary_tag}}
+    <header>
+      <h2>{{name}}</h2>
+      <p>{{description}}</p>
+    </header>
+    {{/posts.[0].primary_tag}}
+    <div class="post-feed">
+      {{#foreach posts}}
+      {{> post-card characters=40}}
+      {{/foreach}}
+    </div>
+    <footer>
+      {{#posts.[0].primary_tag}}
+      <a class="btn btn-outline-secondary" href="{{url}}">{{t 'Find more »'}}</a>
+      {{/posts.[0].primary_tag}}
+    </footer>
+  </div>
+</section>
+{{/if}}
+{{/get}}
+
+{{#get 'posts' slug='about' fields='title,html' as |about|}}
+{{#about}}
+<section class="site-section">
+  <div class="container">
+    <div class="post-secondary">
+      <h2>{{t title}}</h2>
+      {{content}}
+    </div>
+  </div>
+</section>
+{{/about}}
+{{/get}}

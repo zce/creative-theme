@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+@import 'node_modules/bootstrap/scss/functions';
+
+@function spacer($key: 3) {
+  @return map-get($spacers, $key);
+}
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color} tint color
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color} shade color
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}

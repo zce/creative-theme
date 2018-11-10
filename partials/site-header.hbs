@@ -1,0 +1,17 @@
+<header class="site-header">
+  <nav class="site-nav navbar navbar-expand-md navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="{{@blog.url}}">{{#if @blog.logo}}<img class="align-top" src="{{@blog.logo}}" alt="{{@blog.title}}" />{{else}}{{@blog.title}}{{/if}}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site_nav" aria-controls="site_nav" aria-expanded="false" aria-label="{{t 'Toggle navigation'}}"><i class="navbar-toggler-icon"></i></button>
+      <div class="collapse navbar-collapse" id="site_nav">
+        {{#if @blog.navigation}}{{navigation}}{{/if}}
+        <form class="site-nav-search" action="{{@blog.url}}">
+          <input class="form-control" id="search_input" name="q" type="search" placeholder="{{t 'Search'}}" autocomplete="off" aria-label="{{t 'Search'}}" />
+          <label for="search_input">{{> svgs/search size=18}}</label>
+        </form>
+        <a class="site-nav-button btn btn-outline-secondary" href="#signin">{{t 'Sign In'}}</a>
+      </div>
+    </div>
+  </nav>
+  {{{block 'header'}}}
+</header>

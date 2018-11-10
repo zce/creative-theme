@@ -1,0 +1,41 @@
+{{!< default}}
+
+{{#contentFor 'title'}}{{code}} - {{meta_title}}{{/contentFor}}
+
+{{#contentFor 'class'}}error-template{{/contentFor}}
+
+{{#contentFor 'header'}}
+<div class="site-heading container">
+  <h1 class="site-title">{{code}}</h1>
+  <p class="site-description">{{t message}}</p>
+  <a class="btn btn-outline-light btn-sm" href="{{@blog.url}}">{{t 'Back to Home'}} →</a>
+</div>
+{{> site-cover}}
+{{/contentFor}}
+
+{{#get 'posts' include='authors,tags' limit=3}}
+<div class="container">
+  <div class="post-feed">
+    {{#foreach posts}}
+    {{> post-card characters=80}}
+    {{/foreach}}
+  </div>
+</div>
+{{/get}}
+
+{{#if errorDetails}}
+<section class="error-stack container">
+  <h3>Theme errors</h3>
+  <ul class="error-stack-list">
+    {{#each errorDetails}}
+    <li>
+      <em class="error-stack-function">{{{rule}}}</em>
+      {{#each failures}}
+      <p><span class="error-stack-file">Ref: {{ref}}</span></p>
+      <p><span class="error-stack-file">Message: {{message}}</span></p>
+      {{/each}}
+    </li>
+    {{/each}}
+  </ul>
+</section>
+{{/if}}

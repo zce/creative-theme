@@ -1,0 +1,68 @@
+<footer class="site-footer">
+  <div class="container">
+    {{{block 'footer'}}}
+    <aside class="site-widget">
+      <section class="site-widget-follow">
+        <h4>{{t 'Follow me'}}</h4>
+        {{#if @labs.subscribers}}
+        <p>{{t 'Get all the latest & greatest posts delivered straight to your inbox.'}}</p>
+        <form class="input-group" action="/subscribe/" method="post">
+          <input class="form-control" type="email" name="email" placeholder="{{t 'Input your email'}}" autocomplete="off" aria-label="{{t 'Input your email'}}" aria-describedby="btn_send" />
+          <input type="hidden" name="confirm" />
+          <input type="hidden" name="location" />
+          <input type="hidden" name="referrer" />
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" id="btn_send" title="{{t 'Subscribe'}}" aria-label="{{t 'Subscribe'}}">{{> svgs/send}}</button>
+          </div>
+        </form>
+        {{/if}}
+        {{!-- TODO: Replace with your social link --}}
+        <ul>
+          <li><a class="btn btn-outline-secondary btn-sm" href="{{twitter_url}}" title="{{t 'Twitter'}}" target="_blank" rel="noopener">{{> svgs/twitter size=14}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="{{facebook_url}}" title="{{t 'Facebook'}}" target="_blank" rel="noopener">{{> svgs/facebook size=14}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="https://github.com/zce" title="{{t 'GitHub'}}" target="_blank" rel="noopener">{{> svgs/github size=14}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="https://www.youtube.com/channel/UCFUwWB0v2qYqLaB95z1nv9Q" title="{{t 'YouTube'}}" target="_blank" rel="noopener">{{> svgs/youtube size=14}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="https://www.linkedin.com/in/zceme" title="{{t 'LinkedIn'}}" target="_blank" rel="noopener">{{> svgs/linkedin size=14}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="https://slack.zce.me" title="{{t 'Slack'}}" target="_blank" rel="noopener">{{> svgs/slack size=14}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="mailto:w@zce.me" title="{{t 'Email'}}" target="_blank" rel="noopener">{{> svgs/mail size=14}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" title="{{t 'RSS'}}" target="_blank" rel="noopener">{{> svgs/rss size=14}}</a></li>
+        </ul>
+      </section>
+      <section class="site-widget-tags">
+        <h4>{{t 'Tags'}}</h4>
+        {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+        <ul>
+          {{#foreach tags}}
+          <li><a href="{{url}}">{{name}}</a></li>
+          {{/foreach}}
+        </ul>
+        {{/get}}
+      </section>
+      <section class="site-widget-links">
+        <h4>{{t 'Links'}}</h4>
+        <ul>
+          <li><a href="/story/">{{> svgs/link size=12}}{{t 'Story'}}</a></li>
+          <li><a href="/about/">{{> svgs/link size=12}}{{t 'About'}}</a></li>
+          <li><a href="/contact/">{{> svgs/link size=12}}{{t 'Contact'}}</a></li>
+          <li><a href="/archive/">{{> svgs/link size=12}}{{t 'Archive'}}</a></li>
+          <li><a href="/privacy-policy/">{{> svgs/link size=12}}{{t 'Privacy'}}</a></li>
+          <li><a href="/terms-of-service/">{{> svgs/link size=12}}{{t 'Terms'}}</a></li>
+        </ul>
+      </section>
+      <section class="site-widget-subscription">
+        <h4>{{t 'Subscription'}}</h4>
+        {{!-- TODO: Replace with your QR Code --}}
+        <img src="https://s.uieee.com/qrcode/wedn.jpg" alt="WEDN" />
+      </section>
+    </aside>
+    <div class="site-info">
+      {{!-- TODO: Proudly powered by Ghost --}}
+      <span>{{{t '&copy; {year} <a href=\'{url}\'>{title}</a>. All Rights Reserved.' year=(date format='YYYY') url=@blog.url title=@blog.title}}}</span>
+      <ul>
+        <li><a href="/privacy-policy/">{{t 'Privacy Policy'}}</a></li>
+        <li><a href="/terms-of-service/">{{t 'Terms of Service'}}</a></li>
+      </ul>
+      <span><a href="https://github.com/zce/creative">&lt;/&gt;</a> with <i class="heart">&hearts;</i> by <a href="https://zce.me">zce</a></span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+.sr-only {
+  @include sr-only;
+}
+
+.sr-only-focusable {
+  @include sr-only-focusable;
+}

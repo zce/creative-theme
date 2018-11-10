@@ -1,0 +1,147 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the navigation of the site/application.
+// -----------------------------------------------------------------------------
+
+// TODO:
+// - Remove dependence on Bootstrap navbar
+
+.site-nav {
+  background: color('white');
+  box-shadow: 0 0 0.125rem gray('500');
+  // background: gray('900');
+  // box-shadow: 0 0 0.125rem gray('800');
+
+  // .no-cover & {
+  //   border-bottom: $border-width solid $border-color;
+  // }
+
+  .navbar-brand {
+    @include hover-focus {
+      outline: 0;
+
+      img {
+        transform: scale(1.3);
+      }
+    }
+
+    img {
+      height: $navbar-brand-height;
+      transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+  }
+
+  .navbar-toggler:focus {
+    outline: 0;
+    box-shadow: $input-focus-box-shadow;
+  }
+
+  .navbar-nav {
+    @include media-breakpoint-down(sm) {
+      margin: ($navbar-padding-y * 2.5) 0;
+      border-top: $border-width solid $border-color;
+
+      @include transition(border 0.35s);
+    }
+  }
+
+  .nav-item {
+    @include media-breakpoint-down(sm) {
+      padding: $nav-link-padding-y $nav-link-padding-x;
+      border-bottom: $border-width solid $border-color;
+      transform: none;
+
+      @include transition(transform 0.35s);
+    }
+  }
+
+  .collapsing {
+    .navbar-nav {
+      border-color: transparent;
+    }
+
+    .nav-item {
+      transform: rotateX(-90deg);
+    }
+  }
+
+  &-search {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    @include transition(opacity 0.35s);
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: ($navbar-padding-y * 2.5);
+      padding: $navbar-padding-y 0;
+    }
+
+    .form-control {
+      padding-left: 2rem;
+
+      @include media-breakpoint-up(md) {
+        padding-right: 0;
+        width: 0;
+        opacity: 0;
+
+        @include transition(all 0.3s);
+
+        &:focus,
+        &:not(:placeholder-shown) {
+          padding-right: $input-padding-x;
+          width: 14rem;
+          opacity: 1;
+
+          & + label {
+            color: $input-focus-border-color;
+          }
+        }
+      }
+
+      &:not(:placeholder-shown) ~ .dropdown-menu {
+        display: block;
+        min-width: 100%;
+
+        @include media-breakpoint-up(md) {
+          min-width: 120%;
+        }
+      }
+    }
+
+    label {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      margin: 0 0.5rem;
+      cursor: pointer;
+
+      @include transition(color 0.3s);
+
+      .navbar-light & {
+        color: $navbar-light-color;
+      }
+
+      .navbar-dark & {
+        color: $navbar-dark-color;
+      }
+    }
+
+    .collapsing & {
+      opacity: 0;
+    }
+  }
+
+  &-button {
+    margin-left: spacer(3);
+
+    @include transition(opacity 0.5s);
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+      margin: 0 0 ($navbar-padding-y * 2.5);
+    }
+
+    .collapsing & {
+      opacity: 0;
+    }
+  }
+}

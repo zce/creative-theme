@@ -1,0 +1,39 @@
+{{!< default}}
+
+{{#author}}
+{{#contentFor 'header'}}
+<div class="site-heading container">
+  {{#if profile_image}}
+  <img class="author-avatar" src="{{profile_image}}" alt="{{name}}" />
+  {{/if}}
+  <h1 class="author-name">{{name}}</h1>
+  {{#if bio}}<p class="author-bio">{{bio}}</p>{{/if}}
+  <div class="author-meta">
+    {{#if location}}<span>{{> svgs/map-pin size=18}}{{location}}</span>{{/if}}
+    {{#if website}}<a href="{{website}}" target="_blank" rel="noopener">{{> svgs/globe size=18}}{{website}}</a>{{/if}}
+    <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" title="{{t 'RSS'}}" target="_blank" rel="noopener">{{> svgs/rss size=18}} {{plural ../pagination.total empty=(t 'No posts') singular=(t '% post') plural=(t '% posts')}}</a>
+  </div>
+  <div class="author-follow">
+    {{#if twitter}}<a class="btn btn-outline-light" href="{{twitter_url}}" title="{{t 'Twitter'}}" target="_blank" rel="noopener">{{> svgs/twitter}}{{t 'Twitter'}}</a>{{/if}}
+    {{#if facebook}}<a class="btn btn-outline-light" href="{{facebook_url}}" title="{{t 'Facebook'}}" target="_blank" rel="noopener">{{> svgs/facebook}}{{t 'Facebook'}}</a>{{/if}}
+  </div>
+</div>
+{{> site-cover}}
+{{/contentFor}}
+{{/author}}
+
+<div class="container">
+  <div class="post-feed">
+    {{#foreach posts}}
+    {{> post-card characters=80}}
+    {{/foreach}}
+  </div>
+
+  <div class="pagination">
+    {{pagination}}
+  </div>
+</div>
+
+{{#contentFor 'scripts'}}
+<script src="{{asset 'dist/infinite.js'}}"></script>
+{{/contentFor}}

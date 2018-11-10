@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the wrapper of the site/application.
+// -----------------------------------------------------------------------------
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.site-preloader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $body-bg;
+  transition: opacity 0.3s;
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  &::before {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border: 0.25rem solid rgba(theme-color('primary'), 0.15);
+    border-top-color: rgba(theme-color('primary'), 0.8);
+    border-radius: 100%;
+    content: '';
+    animation: rotation 1s infinite linear;
+  }
+}
+
+.site-skiplink {
+  @include sr-only;
+
+  &:active,
+  &:focus {
+    position: static;
+    display: block;
+    overflow: visible;
+    clip: auto;
+    padding: spacer(5);
+    width: auto;
+    height: auto;
+    background: color('white');
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+    font-weight: $display4-weight;
+    font-size: $display4-size;
+    line-height: $display-line-height;
+  }
+}

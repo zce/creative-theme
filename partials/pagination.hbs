@@ -1,0 +1,10 @@
+{{!-- https://github.com/TryGhost/Ghost/blob/master/core/server/helpers/tpl/pagination.hbs --}}
+<nav aria-label="{{t 'Page navigation of site'}}">
+  {{#if prev}}
+  <a class="btn btn-outline-secondary" href="{{page_url prev}}"><span aria-hidden="true">&larr;</span> {{t 'Newer Posts'}}</a>
+  {{/if}}
+  <span class="number">{{t 'Page {page} of {pages}' page=page pages=pages}}</span>
+  {{#if next}}
+  <a class="btn btn-outline-secondary" href="{{page_url next}}">{{t 'Older Posts'}} <span aria-hidden="true">&rarr;</span></a>
+  {{/if}}
+</nav>

@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the tag component.
+// -----------------------------------------------------------------------------
+
+.tag-name {
+  font-weight: $font-weight-bold;
+  font-size: $display3-size;
+  line-height: $display-line-height;
+}
+
+.tag-description {
+  @extend %lead;
+}
+
+.tag-card {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: spacer(5);
+  padding: spacer(5);
+  border-radius: $card-border-radius;
+  background: $featured-img-bg center / cover;
+  box-shadow: $box-shadow;
+  color: color('white');
+  text-align: center;
+
+  @include link(false);
+
+  &-title {
+    font-size: $h1-font-size;
+
+    @include text-truncate;
+  }
+
+  &-subtitle {
+    margin-top: spacer(2);
+    color: theme-color-level('light', 1);
+
+    &::before,
+    &::after {
+      margin: 0 spacer(2);
+      content: '\2014';
+    }
+  }
+
+  &-divider {
+    padding: spacer(2);
+    color: theme-color-level('light', 2);
+  }
+
+  &-list {
+    margin-bottom: spacer(3);
+
+    @include list-unstyled;
+
+    li {
+      padding: spacer(3);
+      border-bottom: $border-width solid rgba($border-color, 0.4);
+      font-weight: $font-weight-light;
+    }
+  }
+}

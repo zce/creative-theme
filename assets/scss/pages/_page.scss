@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the page page.
+// -----------------------------------------------------------------------------
+
+// TODO:
+// - Page structure
+
+.page-template {
+  .post-header {
+    padding: 6vw 4vw 5vw;
+  }
+
+  :not(.post-figure) + .post-content {
+    padding-top: 0;
+  }
+}

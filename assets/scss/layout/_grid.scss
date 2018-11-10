@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the grid of the site/application.
+// -----------------------------------------------------------------------------
+
+.container {
+  max-width: map-get($container-max-widths, xl);
+
+  @include make-container;
+  // @include make-container-max-widths;
+}
+
+.row {
+  @include row;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+
+  @include column;
+}

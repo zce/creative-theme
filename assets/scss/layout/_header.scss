@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.site-header {
+  position: relative;
+}
+
+.site-heading {
+  padding: 10vw 4vw;
+  color: theme-color('light');
+  text-align: center;
+
+  .no-cover & {
+    color: theme-color('dark');
+  }
+}
+
+.site-title {
+  font-weight: $font-weight-bold;
+  font-size: $display3-size;
+  line-height: $display-line-height;
+}
+
+.site-description {
+  @extend %lead;
+}
+
+.site-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  overflow: hidden;
+  padding-top: percentage(10 / 16);
+  min-height: 80vh;
+  background-size: 0;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+  }
+
+  &::before {
+    background: no-repeat center / cover fixed;
+    background-image: inherit;
+    // hack enable GPU
+    transform: translateZ(0);
+
+    // hack ios fixed
+    @include media-breakpoint-down(sm) {
+      background-attachment: inherit;
+    }
+  }
+
+  &::after {
+    background: linear-gradient(rgba($body-bg, 0), $body-bg), 0 / 1px url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><g style="fill:rgba(55,67,72,0.8)"><rect x="0" y="0" width="2" height="2"/><rect x="2" y="2" width="2" height="2"/></g></svg>');
+  }
+}

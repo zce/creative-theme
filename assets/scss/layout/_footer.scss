@@ -1,0 +1,151 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.site-footer {
+  padding: spacer(5) 0;
+  border-top: $border-width solid $border-color;
+  background: color('white');
+  color: theme-color('secondary');
+  font-size: $font-size-sm;
+
+  @include link;
+}
+
+.site-widget {
+  padding-bottom: spacer(4);
+
+  @include row;
+  @include media-breakpoint-down(xs) {
+    text-align: center;
+  }
+
+  h4 {
+    font-weight: $font-weight-light;
+    font-size: $h5-font-size;
+  }
+
+  &-follow {
+    @include column((lg: 5));
+    @include media-breakpoint-down(md) {
+      margin-bottom: spacer(4);
+    }
+
+    p {
+      color: theme-color('secondary');
+    }
+
+    form {
+      margin-bottom: spacer(3);
+    }
+
+    ul {
+      margin: 0 (- spacer(1));
+
+      @include list-unstyled;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 spacer(1) spacer(2);
+    }
+  }
+
+  &-tags {
+    @include column((sm: 5, lg: 3));
+    @include media-breakpoint-down(xs) {
+      margin-bottom: spacer(4);
+    }
+
+    ul {
+      @include list-unstyled;
+    }
+
+    li {
+      display: inline-block;
+      margin-bottom: spacer(2);
+
+      &:not(:last-child) {
+        margin-right: spacer(1);
+
+        &::after {
+          content: '\002C';
+        }
+      }
+    }
+
+    a::before {
+      content: '\0023';
+    }
+  }
+
+  &-links {
+    @include column((sm: 3, lg: 2));
+    @include media-breakpoint-down(xs) {
+      margin-bottom: spacer(4);
+    }
+
+    ul {
+      margin-right: spacer(2);
+      margin-left: spacer(2);
+
+      @include list-unstyled;
+    }
+
+    svg {
+      margin-right: spacer(1);
+    }
+  }
+
+  &-subscription {
+    @include column((sm: 4, lg: 2));
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 8rem;
+    }
+  }
+}
+
+.site-info {
+  display: flex;
+  align-items: center;
+  padding-top: spacer(3);
+  border-top: $border-width solid $border-color;
+
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+  }
+
+  ul {
+    flex-grow: 1;
+    margin: 0 spacer(2);
+    @include list-unstyled;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  @keyframes beat {
+    from,
+    to {
+      // transform: scale(0.95);
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      // transform: scale(1.4);
+      transform: scale3d(1.4, 1.4, 1.4);
+    }
+  }
+
+  .heart {
+    display: inline-block;
+    color: color('red');
+    font-weight: normal;
+    font-style: normal;
+    animation: beat 0.4s ease-in-out infinite;
+  }
+}

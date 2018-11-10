@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+@import 'node_modules/open-color/open-color.scss';
+
+// gray
+$white: $oc-white;
+$gray-100: $oc-gray-1;
+$gray-200: $oc-gray-2;
+$gray-300: $oc-gray-3;
+$gray-400: $oc-gray-4;
+$gray-500: $oc-gray-5;
+$gray-600: $oc-gray-6;
+$gray-700: $oc-gray-7;
+$gray-800: $oc-gray-8;
+$gray-900: $oc-gray-9;
+$black: $oc-black;
+
+// colors
+$blue: $oc-blue-5;
+$indigo: $oc-indigo-5;
+$purple: $oc-grape-5;
+$pink: $oc-pink-5;
+$red: $oc-red-5;
+$orange: $oc-orange-5;
+$yellow: $oc-yellow-5;
+$green: $oc-green-5;
+$teal: $oc-teal-5;
+$cyan: $oc-cyan-5;
+
+// Bootstrap variables
+@import 'node_modules/bootstrap/scss/variables';
+
+// body
+$body-bg: #f4f8fb; // $oc-gray-0;
+$body-color: #374348; // $oc-gray-8;
+
+// font
+$font-family-content: 'Mercury SSm A', 'Mercury SSm B', Georgia, serif;
+
+// headings
+// $headings-margin-bottom: 0.5em;
+$headings-line-height: 1.4;
+$h1-font-size: 2.5em;
+$h2-font-size: 2em;
+$h3-font-size: 1.75em;
+$h4-font-size: 1.5em;
+$h5-font-size: 1.25em;
+$h6-font-size: 1em;
+
+// display
+$display-line-height: $headings-line-height;
+
+// dropdown
+$dropdown-link-color: $navbar-light-color;
+$dropdown-link-hover-color: $navbar-light-hover-color;
+
+// content
+$content-breakpoints: (
+  xs: ( padding-x: $card-spacer-x * 1, padding-y: $card-spacer-y * 1, font-size: $font-size-base * 0.85 ),
+  sm: ( padding-x: $card-spacer-x * 2, padding-y: $card-spacer-y * 2, font-size: $font-size-base * 1 ),
+  md: ( padding-x: $card-spacer-x * 3, padding-y: $card-spacer-y * 3, font-size: $font-size-base * 1.125 ),
+  lg: ( padding-x: $card-spacer-x * 4, padding-y: $card-spacer-y * 4, font-size: $font-size-base * 1.25 ),
+  xl: ( padding-x: $card-spacer-x * 7, padding-y: $card-spacer-y * 7, font-size: $font-size-base * 1.5 )
+);
+
+$featured-img-bg: gray('700') linear-gradient(135deg, gray('600'), gray('800'));
+
+// theme-colors
+// $colors: map-remove($colors, "red", "green");
+$theme-colors: map-remove($theme-colors, 'success', 'danger', 'warning', 'info');

@@ -1,0 +1,9 @@
+{{#if feature_image}}
+<div class="site-cover" style="background-image: url({{feature_image}})"></div>
+{{else if cover_image}}
+<div class="site-cover" style="background-image: url({{cover_image}})"></div>
+{{else if @blog.cover_image}}
+<div class="site-cover" style="background-image: url({{@blog.cover_image}})"></div>
+{{else}}
+{{#contentFor 'special_class'}} no-cover{{/contentFor}}
+{{/if}}

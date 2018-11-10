@@ -1,0 +1,107 @@
+{{!< default}}
+
+{{#post}}
+{{#contentFor 'header'}}
+{{> site-cover}}
+{{/contentFor}}
+
+<article class="{{post_class}} container" role="main">
+  <header class="post-header">
+    <div class="post-meta">
+      <span class="byline">{{authors prefix=(t 'by ') separator=(t ', ')}}</span>
+      <span role="separator" aria-hidden="true"></span>
+      <time class="published" datetime="{{date format='YYYY-MM-DDTHH:mm:ssZ'}}">{{date timeago=true}}</time>
+    </div>
+    <h1 class="post-title">{{title}}</h1>
+    <small class="post-reading-time">{{> svgs/eye size=15}}{{reading_time minute=(t '1 min read') minutes=(t '% min read')}}</small>
+  </header>
+
+  {{#if feature_image}}
+  <figure class="post-figure">
+    <img src="{{feature_image}}" alt="{{title}}" />
+    <figcaption>{{title}}</figcaption>
+  </figure>
+  {{/if}}
+
+  <section class="post-content">
+    {{content}}
+  </section>
+
+  <footer class="post-footer">
+    {{#if tags}}
+    <section class="post-tags">
+      <h3 class="sr-only">{{t 'Tags'}}</h3>
+      <ul>
+        {{#foreach tags}}
+        <li><a href="{{url}}">{{name}}</a></li>
+        {{/foreach}}
+      </ul>
+    </section>
+    {{/if}}
+
+    <section class="post-share">
+      <h3 class="sr-only">{{t 'Share this post'}}</h3>
+      <ul>
+        <li><a href="{{url}}">{{> svgs/aperture size=20}}</a></li>
+        <li><a href="https://twitter.com/share?text={{encode title}}&url={{url absolute=true}}">{{> svgs/twitter size=20}}</a></li>
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute=true}}">{{> svgs/facebook size=20}}</a></li>
+      </ul>
+    </section>
+
+    {{!-- TODO: authors card --}}
+    {{#primary_author}}
+    <section class="post-authors">
+      <h3 class="sr-only">{{t 'Authors'}}</h3>
+      <img src="{{profile_image}}" alt="{{name}}" />
+      <div>
+        <h4><a href="{{url}}">{{name}}</a></h4>
+        {{#if bio}}<p>{{bio}}</p>{{else}}<p>{{{t 'Read <a href=\'{url}\'>more posts</a> by this author.' url=(url)}}}</p>{{/if}}
+      </div>
+      <a class="btn btn-outline-secondary" href="{{url}}">{{t 'Read More'}}</a>
+    </section>
+    {{/primary_author}}
+
+    {{#if @labs.subscribers}}
+    <section class="post-subscribe">
+      <h3>{{t 'Subscribe to {title}' title=@blog.title}}</h3>
+      <p>{{t 'Get the latest posts delivered right to your inbox.'}}</p>
+      <form class="form-inline" action="/subscribe/" method="post">
+        <input type="hidden" name="confirm" />
+        <input type="hidden" name="location" />
+        <input type="hidden" name="referrer" />
+        <input id="subscribe_input" class="form-control" type="email" name="email" placeholder="{{t 'Input your email'}}" autocomplete="off" aria-label="{{t 'Input your email'}}" aria-describedby="btn_subscribe" />
+        <button class="btn btn-primary" id="btn_subscribe">{{t 'Subscribe'}}</button>
+      </form>
+    </section>
+    {{/if}}
+
+    <section class="post-license">
+      <h3 class="sr-only">{{t 'License'}}</h3>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license">{{> svgs/license width=168}}</a>
+      <p>{{{t 'This work is licensed under a <a href=\'{url}\' target=\'_blank\' rel=\'license\'>Creative Commons Attribution-ShareAlike 4.0 International License</a>' url='https://creativecommons.org/licenses/by-sa/4.0/'}}}</p>
+    </section>
+  </footer>
+</article>
+
+<section class="post-comments">
+  <h3 class="sr-only">{{t 'Leave a Reply'}}</h3>
+  {{> comments site='zce-ghost'}}
+</section>
+
+<section class="post-related">
+  <div class="container">
+    <h3 class="sr-only">{{t 'Related posts'}}</h3>
+    <div class="post-feed">
+      {{#primary_tag}}
+      {{> tag-card skip=../id}}
+      {{/primary_tag}}
+      {{#prev_post}}
+      {{> post-card words=10}}
+      {{/prev_post}}
+      {{#next_post}}
+      {{> post-card words=10}}
+      {{/next_post}}
+    </div>
+  </div>
+</section>
+{{/post}}

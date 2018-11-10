@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the pagination component.
+// -----------------------------------------------------------------------------
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: spacer(5);
+
+  .number {
+    margin: 0 spacer(4);
+    color: theme-color('secondary');
+  }
+}

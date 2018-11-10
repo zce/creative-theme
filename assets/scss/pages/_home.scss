@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.home-template {
+  .site-heading {
+    padding: 18vw 4vw;
+  }
+
+  .site-cover {
+    bottom: 0;
+    padding-top: 0;
+    min-height: auto;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .post-primary:nth-child(2n + 1) {
+    .post-primary-figure {
+      @include media-breakpoint-up(md) {
+        order: 1;
+      }
+    }
+  }
+}
