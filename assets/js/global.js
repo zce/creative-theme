@@ -16,6 +16,29 @@ function loadScript (src, callback) {
   document.body.appendChild(scriptElement)
 }
 
+// // pjax
+// // -----------------------------------------------------------------------------
+// // https://unpkg.com/jquery-pjax
+// ;(() => {
+//   $(document).pjax('a[href]', 'body', { fragment: 'body' })
+//   // qsa('a[href]').forEach(item => item.addEventListener('click', e => {
+//   //   const url = e.currentTarget.href
+//   //   if (url === window.location.href) return
+
+//   //   const xhr = new window.XMLHttpRequest()
+//   //   xhr.responseType = 'document'
+
+//   //   xhr.addEventListener('load', () => {
+//   //     document.body = xhr.response.querySelector('body')
+//   //   })
+
+//   //   xhr.open('GET', url)
+//   //   xhr.send(null)
+
+//   //   e.preventDefault()
+//   // }))
+// })()
+
 // search
 // -----------------------------------------------------------------------------
 ;(() => {
