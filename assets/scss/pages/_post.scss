@@ -9,7 +9,6 @@
 
   :not(.post-figure) + .post-content > .kg-card:first-child {
     position: relative;
-    background: $featured-img-bg;
 
     @each $breakpoint, $size in $content-breakpoints {
       @include media-breakpoint-up($breakpoint) {

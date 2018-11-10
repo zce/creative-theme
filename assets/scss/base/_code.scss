@@ -6,9 +6,9 @@
 
 // Inline code
 code {
-  font-size: $code-font-size;
   color: $code-color;
   word-break: break-word;
+  font-size: $code-font-size;
 
   // Streamline the style when inside anchors to avoid broken underline and more
   a > & {
@@ -19,16 +19,18 @@ code {
 // User input typically entered via keyboard
 kbd {
   padding: $kbd-padding-y $kbd-padding-x;
-  font-size: $kbd-font-size;
-  color: $kbd-color;
   background-color: $kbd-bg;
+  color: $kbd-color;
+  font-size: $kbd-font-size;
+
   @include border-radius($border-radius-sm);
   @include box-shadow($kbd-box-shadow);
 
   kbd {
     padding: 0;
-    font-size: 100%;
     font-weight: $nested-kbd-font-weight;
+    font-size: 100%;
+
     @include box-shadow(none);
   }
 }
@@ -36,13 +38,13 @@ kbd {
 // Blocks of code
 pre {
   display: block;
-  font-size: $code-font-size;
   color: $pre-color;
+  font-size: $code-font-size;
 
   // Account for some code outputs that place code tags in pre tags
   code {
-    font-size: inherit;
     color: inherit;
     word-break: normal;
+    font-size: inherit;
   }
 }
