@@ -240,8 +240,8 @@
     margin: spacer(2);
 
     @include media-breakpoint-down(xs) {
-      width: 100%;
       margin: spacer(2) 0;
+      width: 100%;
     }
   }
 }

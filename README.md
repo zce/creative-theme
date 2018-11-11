@@ -45,6 +45,7 @@ $ cd path/to/ghost && ghost restart --development
 - [ ] Custom template
 - [ ] PJAX support
 - [ ] jquery & js
+- [ ] svgs
 
 ## Templates
 

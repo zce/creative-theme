@@ -6,7 +6,7 @@
       <div class="collapse navbar-collapse" id="site_nav">
         {{#if @blog.navigation}}{{navigation}}{{/if}}
         <form class="search" action="{{@blog.url}}">
-          <input class="form-control" id="search_input" name="q" type="search" placeholder="{{t 'Search'}}" autocomplete="off" aria-label="{{t 'Search'}}" />
+          <input class="form-control" id="search_input" name="q" data-empty="{{t 'No results'}}" type="search" placeholder="{{t 'Search'}}" autocomplete="off" aria-label="{{t 'Search'}}" />
           <label for="search_input">{{> svgs/search size=18}}</label>
         </form>
         <a class="btn btn-outline-secondary" href="#signin">{{t 'Sign In'}}</a>

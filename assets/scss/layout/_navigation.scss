@@ -58,8 +58,8 @@
     display: flex;
     align-items: center;
     margin-left: auto;
-    @include transition(opacity 0.35s);
 
+    @include transition(opacity 0.35s);
     @include media-breakpoint-down(sm) {
       margin-bottom: ($navbar-padding-y * 2.5);
       padding: $navbar-padding-y 0;
@@ -113,7 +113,6 @@
     margin-left: spacer(2);
 
     @include transition(opacity 0.5s);
-
     @include media-breakpoint-down(sm) {
       display: block;
       margin: 0 0 ($navbar-padding-y * 2.5);
@@ -133,5 +132,9 @@
     .btn {
       opacity: 0;
     }
+  }
+
+  .dropdown-menu {
+    font-size: $font-size-sm;
   }
 }

@@ -41,11 +41,11 @@
 
     {{!-- TODO: post share --}}
     <section class="post-share">
-      <h3 class="sr-only">{{t 'Share this post'}}</h3>
+      <h3 class="sr-only">{{t 'Share this'}}</h3>
       <ul>
-        <li><a href="{{url}}">{{> svgs/aperture size=20}}</a></li>
-        <li><a href="https://twitter.com/share?text={{encode title}}&url={{url absolute=true}}">{{> svgs/twitter size=20}}</a></li>
-        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute=true}}">{{> svgs/facebook size=20}}</a></li>
+        <li><a href="http://qr.liantu.com/api.php?text={{url absolute=true}}" title="{{t 'WeChat'}}">{{> svgs/aperture size=20}}</a></li>
+        <li><a href="https://twitter.com/share?text={{encode title}}&url={{url absolute=true}}" title="{{t 'Facebook'}}">{{> svgs/twitter size=20}}</a></li>
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute=true}}" title="{{t 'Facebook'}}">{{> svgs/facebook size=20}}</a></li>
       </ul>
     </section>
 

@@ -13,8 +13,8 @@
     @each $breakpoint, $size in $content-breakpoints {
       @include media-breakpoint-up($breakpoint) {
         top: (- map-get($size, padding-y));
-        margin-left: (- map-get($size, padding-x));
         margin-right: (- map-get($size, padding-x));
+        margin-left: (- map-get($size, padding-x));
       }
     }
   }

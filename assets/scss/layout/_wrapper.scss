@@ -18,6 +18,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: $body-bg;
+
   @include transition(opacity 0.3s);
 
   @keyframes rotation {

@@ -49,14 +49,14 @@
   }
 
   &::before {
-    background: no-repeat center / cover fixed;
+    // hack ios fixed
+    background: no-repeat center / cover;
     background-image: inherit;
     // hack enable GPU
     transform: translateZ(0);
 
-    // hack ios fixed
-    @include media-breakpoint-down(sm) {
-      background-attachment: inherit;
+    @include media-breakpoint-up(lg) {
+      background-attachment: fixed;
     }
   }
 

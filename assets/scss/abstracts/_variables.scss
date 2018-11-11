@@ -65,6 +65,7 @@ $content-breakpoints: (
   xl: ( padding-x: $card-spacer-x * 7, padding-y: $card-spacer-y * 7, font-size: $font-size-base * 1.375 )
 );
 
+// featured-img
 $featured-img-bg: gray('700') linear-gradient(135deg, gray('600'), gray('800'));
 
 // theme-colors

@@ -77,8 +77,8 @@
 .kg-width-wide {
   @each $breakpoint, $size in $content-breakpoints {
     @include media-breakpoint-up($breakpoint) {
-      margin-left: (- map-get($size, padding-x));
       margin-right: (- map-get($size, padding-x));
+      margin-left: (- map-get($size, padding-x));
     }
   }
 }

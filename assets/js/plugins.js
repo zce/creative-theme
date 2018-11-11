@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // https://unpkg.com/bootstrap/js/dist/util.js
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery')) :
