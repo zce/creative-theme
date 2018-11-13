@@ -151,11 +151,11 @@ const setup = () => {
 
   // site preloader
   // -----------------------------------------------------------------------------
-  const loader = qs('.site-preloader')
-  if (loader) {
+  const spinner = qs('.site-spinner')
+  if (spinner) {
     // remove loader spinner
-    loader.style.opacity = 0
-    setTimeout(() => loader.parentElement.removeChild(loader), 1000)
+    spinner.style.opacity = 0
+    setTimeout(() => spinner.parentElement.removeChild(spinner), 1000)
   }
 }
 

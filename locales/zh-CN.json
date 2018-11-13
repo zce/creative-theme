@@ -5,8 +5,8 @@
   "...": "...",
   " (Page %)": "（第 % 页）",
 
-  "1 min read": "1 分钟",
-  "% min read": "% 分钟",
+  "1 min read": "1 分钟读完",
+  "% min read": "% 分钟读完",
   "% post": "% 篇文章",
   "% posts": "% 篇文章",
   "No posts": "暂无文章",
@@ -27,8 +27,8 @@
 
   "Untagged": "未加标签",
   "Read More": "继续阅读",
-  "Find more »": "发现更多 »",
-  "Continue reading →": "继续阅读 →",
+  "Find more": "发现更多",
+  "Continue reading": "继续阅读",
   "Latest Posts": "近期文章",
   "Keep the dots in your life.": "记录生活中的点点滴滴",
   "Page not found": "未找到相关页面",
