@@ -67,6 +67,7 @@ $content-breakpoints: (
 
 // featured-img
 $featured-img-bg: gray('700') linear-gradient(135deg, gray('600'), gray('800'));
+$featured-img-cover: linear-gradient(135deg, rgba(0, 40, 60, 0.8), rgba(0, 20, 40, 0.7));
 
 // theme-colors
 // $colors: map-remove($colors, "red", "green");

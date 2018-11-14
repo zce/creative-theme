@@ -29,13 +29,27 @@
 
   @include link(false);
 
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $featured-img-cover;
+    content: '';
+
+    backdrop-filter: blur(2px);
+  }
+
   &-title {
+    z-index: 5;
     font-size: $h1-font-size;
 
     @include text-truncate;
   }
 
   &-subtitle {
+    z-index: 5;
     margin-top: spacer(2);
     color: theme-color-level('light', 1);
 
@@ -52,6 +66,7 @@
   }
 
   &-list {
+    z-index: 5;
     margin-bottom: spacer(3);
 
     @include list-unstyled;
@@ -61,5 +76,9 @@
       border-bottom: $border-width solid rgba($border-color, 0.4);
       font-weight: $font-weight-light;
     }
+  }
+
+  &-footer {
+    z-index: 5;
   }
 }
