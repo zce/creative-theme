@@ -3,31 +3,27 @@
 
 {{#contentFor 'scripts'}}
 <script>
-  var disqus_config = function () {
-    this.page.url = '{{url absolute='true'}}';
+  function disqus_config () {
+    this.page.url = '{{url absolute=true}}';
     this.page.identifier = 'item-{{comment_id}}';
-  };
-  (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://{{site}}.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
+  }
 </script>
+{{!-- TODO: Replace `zce-sandbox` with your disqus shortname --}}
+<script src="https://zce-sandbox.disqus.com/embed.js" data-timestamp="{{date null format='x'}}"></script>
 {{/contentFor}}
 
 {{!-- Valine --}}
 {{!-- <div id="comments"></div>
 
 {{#contentFor 'scripts'}}
-<script src="https://unpkg.com/leancloud-storage@3.10.0/dist/av-min.js"></script>
+<script src="https://unpkg.com/leancloud-storage/dist/av-min.js"></script>
 <script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
 <script>
   new Valine({
     el: '#comments',
-    appId: 'aBdFcqH3itLmuttzsWqbcom2-gzGzoHsz',
-    appKey: 'LnDkchhovrDKIogysvWnd1mr',
-    path: 'item-{{comment_id}}'
+    appId: '<your leancloud app id>',
+    appKey: '<your leancloud app key>',
+    path: '{{url absolute=true}}'
   })
 </script>
 {{/contentFor}} --}}

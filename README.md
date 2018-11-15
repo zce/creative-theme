@@ -41,6 +41,7 @@ $ cd path/to/ghost && ghost restart --development
 - [x] Image lazyload
 - [x] Infinite scroll
 - [x] I18n support
+  + Activate the language in the General settings of Ghost admin, e.g. zh-CN, en
 - [x] Comments
 - [ ] Custom template
 - [ ] Custom built in template (error, amp, subscribe, private)
