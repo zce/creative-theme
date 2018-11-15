@@ -59,6 +59,8 @@
   "Get the latest posts delivered right to your inbox.": "订阅最新的文章，我们将直接发送到您的邮箱。",
   "You've successfully subscribed to {title}": "您已经成功订阅 {title}",
 
+  "Location": "位置",
+  "Website": "网站",
   "RSS": "RSS",
   "Email": "邮箱",
   "GitHub": "GitHub",
