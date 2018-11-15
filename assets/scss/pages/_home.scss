@@ -16,12 +16,4 @@
       display: none;
     }
   }
-
-  .post-primary:nth-child(2n + 1) {
-    .post-primary-figure {
-      @include media-breakpoint-up(md) {
-        order: 1;
-      }
-    }
-  }
 }

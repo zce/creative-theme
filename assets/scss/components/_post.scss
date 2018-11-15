@@ -465,6 +465,9 @@
     margin: 0 auto spacer(5);
 
     @include column((xs: 9, md: 4));
+    @include media-breakpoint-up(md) {
+      order: 1;
+    }
 
     a {
       position: relative;
