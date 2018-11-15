@@ -8,6 +8,7 @@
 {{> site-cover}}
 {{/contentFor}}
 
+{{!-- Primary featured posts --}}
 {{#get 'posts' filter='featured:true' limit=1 as |featured|}}
 {{#featured}}
 <section class="site-section">
@@ -27,6 +28,7 @@
 {{/featured}}
 {{/get}}
 
+{{!-- Default posts list --}}
 <section class="site-section">
   <div class="container">
     <header>
@@ -44,6 +46,7 @@
   </div>
 </section>
 
+{{!-- Secondary featured posts --}}
 {{#get 'posts' filter='featured:true' limit=1 page=2 as |featured|}}
 {{#featured}}
 <section class="site-section">
