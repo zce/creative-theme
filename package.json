@@ -26,7 +26,7 @@
   },
   "scripts": {
     "lint:js": "standard assets/js/*.js gulpfile.js",
-    "lint:scss": "csscomb assets/scss",
+    "lint:scss": "csscomb -c assets/scss/.csscomb.json assets/scss",
     "lint": "yarn lint:js && yarn lint:scss",
     "test": "yarn lint && gscan .",
     "build": "gulp build",
