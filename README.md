@@ -43,6 +43,7 @@ $ cd path/to/ghost && ghost restart --development
 - [x] I18n support
 - [x] Comments
 - [ ] Custom template
+- [ ] Custom built in template (error, amp, subscribe, private)
 - [ ] PJAX support
 - [ ] jquery & js
 - [ ] svgs & icon
