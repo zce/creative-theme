@@ -63,7 +63,8 @@
 {{/featured}}
 {{/get}}
 
-{{#get 'posts' filter='primary_tag:tutorial' include='tags' limit=6}}
+{{!-- TODO: Replace tutorial with your secondary tag slug --}}
+{{#get 'posts' filter='primary_tag:tutorial' include='tags,authors' limit=6}}
 {{#if posts}}
 <section class="site-section">
   <div class="container">

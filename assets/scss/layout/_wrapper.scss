@@ -18,6 +18,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: $body-bg;
+  // cursor: wait;
 
   @include transition(opacity 0.3s);
 

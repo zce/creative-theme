@@ -16,7 +16,7 @@
           </div>
         </form>
         {{/if}}
-        {{!-- TODO: Replace with your social link --}}
+        {{!-- TODO: Replace with your social links --}}
         <ul>
           <li><a class="btn btn-outline-secondary btn-sm" href="{{twitter_url}}" title="{{t 'Twitter'}}" target="_blank" rel="noopener">{{> svgs/twitter size=14}}</a></li>
           <li><a class="btn btn-outline-secondary btn-sm" href="{{facebook_url}}" title="{{t 'Facebook'}}" target="_blank" rel="noopener">{{> svgs/facebook size=14}}</a></li>
@@ -40,6 +40,7 @@
       </section>
       <section class="site-widget-links">
         <h4>{{t 'Links'}}</h4>
+        {{!-- TODO: Custom footer links --}}
         <ul>
           <li><a href="/story/">{{> svgs/link size=12}}{{t 'Story'}}</a></li>
           <li><a href="/about/">{{> svgs/link size=12}}{{t 'About'}}</a></li>
@@ -56,7 +57,7 @@
       </section>
     </aside>
     <div class="site-info">
-      {{!-- TODO: Proudly powered by Ghost --}}
+      {{!-- Proudly powered by Ghost / Proudly published with Ghost --}}
       <span>{{{t '&copy; {year} <a href=\'{url}\'>{title}</a>. All Rights Reserved.' year=(date format='YYYY') url=@blog.url title=@blog.title}}}</span>
       <ul>
         <li><a href="/privacy-policy/">{{t 'Privacy Policy'}}</a></li>

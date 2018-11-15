@@ -264,20 +264,19 @@
 
 .post-comments {
   margin-bottom: spacer(5);
-  padding: 0 ($grid-gutter-width / 2);
+  padding: 0 spacer(3);
 
   @include inner;
 }
 
 .post-related {
-  padding-top: spacer(5);
-  background: tint($body-bg, 50%);
+  background: shade($body-bg, 2%);
 }
 
 .post-feed {
   padding-top: spacer(5);
 
-  @include make-row;
+  @include row;
 
   .post-card,
   .tag-card {
