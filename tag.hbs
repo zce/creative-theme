@@ -3,11 +3,11 @@
 {{#tag}}
 {{#contentFor 'header'}}
 <div class="site-heading container">
-  <h1 class="tag-name">{{name}}</h1>
+  <h1 class="site-title">{{name}}</h1>
   {{#if description}}
-  <p class="tag-description">{{description}}</p>
+  <p class="site-description">{{description}}</p>
   {{else}}
-  <p class="tag-description">{{plural ../pagination.total empty=(t 'No posts') singular=(t '% post') plural=(t '% posts')}}</p>
+  <p class="site-description">{{plural ../pagination.total empty=(t 'No posts') singular=(t '% post') plural=(t '% posts')}}</p>
   {{/if}}
 </div>
 {{> site-cover}}

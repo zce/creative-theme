@@ -2,16 +2,6 @@
 // This file contains all styles related to the tag component.
 // -----------------------------------------------------------------------------
 
-.tag-name {
-  font-weight: $font-weight-bold;
-  font-size: $display3-size;
-  line-height: $display-line-height;
-}
-
-.tag-description {
-  @extend %lead;
-}
-
 .tag-card {
   position: relative;
   display: flex;
