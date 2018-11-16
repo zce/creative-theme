@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the tag component.
+// This file contains all styles related to the tag card component.
 // -----------------------------------------------------------------------------
 
 .tag-card {
@@ -14,7 +14,7 @@
   border-radius: $card-border-radius;
   background: $featured-img-bg center / cover;
   box-shadow: $box-shadow;
-  color: color('white');
+  color: theme-color('light');
   text-align: center;
 
   @include link(false);
@@ -32,7 +32,9 @@
   }
 
   &-title {
+    position: relative;
     z-index: 5;
+    width: 100%;
     font-size: $h1-font-size;
 
     @include text-truncate;
