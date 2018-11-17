@@ -9,13 +9,13 @@
   <h1 class="author-name">{{name}}</h1>
   {{#if bio}}<p class="author-bio">{{bio}}</p>{{/if}}
   <div class="author-meta">
-    {{#if location}}<span title="{{t 'Location'}}">{{> svgs/map-pin size=18}}{{location}}</span>{{/if}}
-    {{#if website}}<a href="{{website}}" title="{{t 'Website'}}" target="_blank" rel="noopener">{{> svgs/globe size=18}}{{website}}</a>{{/if}}
-    <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" title="{{t 'RSS'}}" target="_blank" rel="noopener">{{> svgs/rss size=18}} {{plural ../pagination.total empty=(t 'No posts') singular=(t '% post') plural=(t '% posts')}}</a>
+    {{#if location}}<span title="{{t 'Location'}}">{{> svg/icon icon='map-pin' size=18}} {{location}}</span>{{/if}}
+    {{#if website}}<a href="{{website}}" title="{{t 'Website'}}" target="_blank" rel="noopener">{{> svg/icon icon='globe' size=18}} {{website}}</a>{{/if}}
+    <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" title="{{t 'RSS'}}" target="_blank" rel="noopener">{{> svg/icon icon='rss' size=18}} {{plural ../pagination.total empty=(t 'No posts') singular=(t '% post') plural=(t '% posts')}}</a>
   </div>
   <div class="author-follow">
-    {{#if twitter}}<a class="btn btn-outline-light btn-sm" href="{{twitter_url}}" title="{{t 'Twitter'}}" target="_blank" rel="noopener">{{> svgs/twitter}} {{t 'Twitter'}}</a>{{/if}}
-    {{#if facebook}}<a class="btn btn-outline-light btn-sm" href="{{facebook_url}}" title="{{t 'Facebook'}}" target="_blank" rel="noopener">{{> svgs/facebook}} {{t 'Facebook'}}</a>{{/if}}
+    {{#if twitter}}<a class="btn btn-outline-light btn-sm" href="{{twitter_url}}" title="{{t 'Twitter'}}" target="_blank" rel="noopener">{{> svg/brand icon='twitter'}} {{t 'Twitter'}}</a>{{/if}}
+    {{#if facebook}}<a class="btn btn-outline-light btn-sm" href="{{facebook_url}}" title="{{t 'Facebook'}}" target="_blank" rel="noopener">{{> svg/brand icon='facebook'}} {{t 'Facebook'}}</a>{{/if}}
   </div>
 </div>
 {{> site-cover}}

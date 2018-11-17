@@ -7,7 +7,7 @@
         {{#if @blog.navigation}}{{navigation}}{{/if}}
         <form class="search" action="{{@blog.url}}">
           <input class="form-control" id="search_input" name="q" data-empty="{{t 'No results'}}" type="search" placeholder="{{t 'Search'}}" autocomplete="off" aria-label="{{t 'Search'}}" />
-          <label for="search_input">{{> svgs/search size=18}}</label>
+          <label for="search_input">{{> svg/icon icon='search'}}</label>
         </form>
         {{!-- <a class="btn btn-outline-secondary" href="#signin">{{t 'Sign In'}}</a>
         <a class="btn btn-outline-secondary" href="#signout">{{t 'Sign Out'}}</a> --}}

@@ -46,6 +46,10 @@
       display: inline-block;
       margin: 0 spacer(1) spacer(2);
     }
+
+    .btn:hover {
+      border-color: theme-color('secondary');
+    }
   }
 
   &-tags {
@@ -87,10 +91,6 @@
       margin-left: spacer(2);
 
       @include list-unstyled;
-    }
-
-    svg {
-      margin-right: spacer(1);
     }
   }
 

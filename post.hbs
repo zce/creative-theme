@@ -13,7 +13,7 @@
       <time class="published" datetime="{{date format='YYYY-MM-DDTHH:mm:ssZ'}}">{{date timeago=true}}</time>
     </div>
     <h1 class="post-title">{{title}}</h1>
-    <small class="post-reading-time">{{> svgs/eye size=15}}{{reading_time minute=(t '1 min read') minutes=(t '% min read')}}</small>
+    <small class="post-reading-time">{{> svg/icon icon='eye' size=15}} {{reading_time minute=(t '1 min read') minutes=(t '% min read')}}</small>
   </header>
 
   {{#if feature_image}}
@@ -43,10 +43,10 @@
     <section class="post-share">
       <h3 class="sr-only">{{t 'Share this'}}</h3>
       <ul>
-        <li><a href="http://qr.liantu.com/api.php?text={{url absolute=true}}" title="{{t 'WeChat'}}">{{> svgs/aperture size=20}}</a></li>
-        <li><a href="https://twitter.com/share?text={{encode title}}&url={{url absolute=true}}" title="{{t 'Facebook'}}">{{> svgs/twitter size=20}}</a></li>
-        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute=true}}" title="{{t 'Facebook'}}">{{> svgs/facebook size=20}}</a></li>
-        {{!-- https://plus.google.com/share?url={{url absolute=true}} --}}
+        <li><a href="http://qr.liantu.com/api.php?text={{url absolute=true}}" title="{{t 'WeChat'}}">{{> svg/icon icon='aperture' size=20}}</a></li>
+        <li><a href="https://plus.google.com/share?url={{url absolute=true}}" title="{{t 'Facebook'}}">{{> svg/brand icon='google-plus' size=20}}</a></li>
+        <li><a href="https://twitter.com/share?text={{encode title}}&url={{url absolute=true}}" title="{{t 'Facebook'}}">{{> svg/brand icon='twitter' size=20}}</a></li>
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute=true}}" title="{{t 'Facebook'}}">{{> svg/brand icon='facebook' size=20}}</a></li>
       </ul>
     </section>
 
@@ -79,7 +79,7 @@
 
     <section class="post-license">
       <h3 class="sr-only">{{t 'License'}}</h3>
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license">{{> svgs/license width=168}}</a>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license">{{> svg/license width=168}}</a>
       <p>{{{t 'This work is licensed under a <a href=\'{url}\' target=\'_blank\' rel=\'license\'>Creative Commons Attribution-ShareAlike 4.0 International License</a>' url='https://creativecommons.org/licenses/by-sa/4.0/'}}}</p>
     </section>
   </footer>

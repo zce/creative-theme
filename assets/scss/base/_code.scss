@@ -51,10 +51,12 @@ pre {
 
 // https://prismjs.com
 // -----------------------------------------------------------------------------
+// TODO:
+// - Redesign code token color
+// - https://github.com/PrismJS/prism/blob/master/themes/prism.css
 
 code[class*='language-'],
 pre[class*='language-'] {
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   white-space: pre;
   word-spacing: normal;
   word-wrap: normal;
@@ -76,7 +78,7 @@ pre[class*='language-'] {
 pre {
   overflow: auto;
   padding: 0.8em 1em;
-  max-height: 60vh;
+  max-height: 70vh;
   background-color: gray('800');
   color: gray('100');
   @include border-radius($border-radius);

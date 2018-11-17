@@ -1,7 +1,7 @@
 <article class="post-card">
   <figure class="post-card-figure">
     <a href="{{url}}" title="{{title}}">
-      {{#if feature_image}}<img src="{{asset 'img/holder.svg'}}" alt="{{title}}" data-src="{{feature_image}}" />{{else}}{{> svgs/thumbnail text=title}}{{/if}}
+      {{#if feature_image}}<img src="{{asset 'dist/empty.svg'}}" alt="{{title}}" data-src="{{feature_image}}" />{{else}}{{> svg/thumbnail text=title}}{{/if}}
     </a>
   </figure>
   <div class="post-card-body">
@@ -20,16 +20,10 @@
     <div class="post-card-meta">
       <ul class="post-card-authors">
         {{#foreach authors}}
-        <li>
-          <a href="{{url}}" title="{{name}}">
-            <img src="{{#if profile_image}}{{profile_image}}{{else}}{{asset 'img/avatar.svg'}}{{/if}}" alt="{{name}}" />
-          </a>
-        </li>
+        <li><a href="{{url}}" title="{{name}}">{{#if profile_image}}<img src="{{profile_image}}" alt="{{name}}" />{{else}}{{> svg/avatar}}{{/if}}</a></li>
         {{/foreach}}
       </ul>
-      <small class="post-card-reading-time">
-        {{reading_time minute=(t '1 min read') minutes=(t '% min read')}}
-      </small>
+      <small class="post-card-reading-time">{{reading_time minute=(t '1 min read') minutes=(t '% min read')}}</small>
     </div>
   </div>
 </article>

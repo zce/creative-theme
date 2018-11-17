@@ -12,20 +12,21 @@
           <input type="hidden" name="location" />
           <input type="hidden" name="referrer" />
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary" id="btn_send" title="{{t 'Subscribe'}}" aria-label="{{t 'Subscribe'}}">{{> svgs/send}}</button>
+            <button class="btn btn-outline-secondary" id="btn_send" title="{{t 'Subscribe'}}" aria-label="{{t 'Subscribe'}}">{{> svg/icon icon='send'}}</button>
           </div>
         </form>
         {{/if}}
         {{!-- TODO: Replace with your social links --}}
         <ul>
-          <li><a class="btn btn-outline-secondary btn-sm" href="{{twitter_url}}" title="{{t 'Twitter'}}" target="_blank" rel="noopener">{{> svgs/twitter size=14}}</a></li>
-          <li><a class="btn btn-outline-secondary btn-sm" href="{{facebook_url}}" title="{{t 'Facebook'}}" target="_blank" rel="noopener">{{> svgs/facebook size=14}}</a></li>
-          <li><a class="btn btn-outline-secondary btn-sm" href="https://github.com/zce" title="{{t 'GitHub'}}" target="_blank" rel="noopener">{{> svgs/github size=14}}</a></li>
-          <li><a class="btn btn-outline-secondary btn-sm" href="https://www.youtube.com/channel/UCFUwWB0v2qYqLaB95z1nv9Q" title="{{t 'YouTube'}}" target="_blank" rel="noopener">{{> svgs/youtube size=14}}</a></li>
-          <li><a class="btn btn-outline-secondary btn-sm" href="https://www.linkedin.com/in/zceme" title="{{t 'LinkedIn'}}" target="_blank" rel="noopener">{{> svgs/linkedin size=14}}</a></li>
-          <li><a class="btn btn-outline-secondary btn-sm" href="https://slack.zce.me" title="{{t 'Slack'}}" target="_blank" rel="noopener">{{> svgs/slack size=14}}</a></li>
-          <li><a class="btn btn-outline-secondary btn-sm" href="mailto:w@zce.me" title="{{t 'Email'}}" target="_blank" rel="noopener">{{> svgs/mail size=14}}</a></li>
-          <li><a class="btn btn-outline-secondary btn-sm" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" title="{{t 'RSS'}}" target="_blank" rel="noopener">{{> svgs/rss size=14}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="{{twitter_url}}" title="{{t 'Twitter'}}" target="_blank" rel="noopener">{{> svg/brand icon='twitter'}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="{{facebook_url}}" title="{{t 'Facebook'}}" target="_blank" rel="noopener">{{> svg/brand icon='facebook'}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="{{facebook_url}}" title="{{t 'WeChat'}}" target="_blank" rel="noopener">{{> svg/brand icon='wechat'}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="https://github.com/zce" title="{{t 'GitHub'}}" target="_blank" rel="noopener">{{> svg/brand icon='github'}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="https://www.youtube.com/channel/UCFUwWB0v2qYqLaB95z1nv9Q" title="{{t 'YouTube'}}" target="_blank" rel="noopener">{{> svg/brand icon='youtube'}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="https://www.linkedin.com/in/zceme" title="{{t 'LinkedIn'}}" target="_blank" rel="noopener">{{> svg/brand icon='linkedin'}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="https://slack.zce.me" title="{{t 'Slack'}}" target="_blank" rel="noopener">{{> svg/brand icon='slack'}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="{{facebook_url}}" title="{{t 'QQ'}}" target="_blank" rel="noopener">{{> svg/brand icon='qq'}}</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" title="{{t 'RSS'}}" target="_blank" rel="noopener">{{> svg/brand icon='rss'}}</a></li>
         </ul>
       </section>
       <section class="site-widget-tags">
@@ -42,12 +43,12 @@
         <h4>{{t 'Links'}}</h4>
         {{!-- TODO: Custom footer links --}}
         <ul>
-          <li><a href="/story/">{{> svgs/link size=12}}{{t 'Story'}}</a></li>
-          <li><a href="/about/">{{> svgs/link size=12}}{{t 'About'}}</a></li>
-          <li><a href="/contact/">{{> svgs/link size=12}}{{t 'Contact'}}</a></li>
-          <li><a href="/archive/">{{> svgs/link size=12}}{{t 'Archive'}}</a></li>
-          <li><a href="/privacy-policy/">{{> svgs/link size=12}}{{t 'Privacy'}}</a></li>
-          <li><a href="/terms-of-service/">{{> svgs/link size=12}}{{t 'Terms'}}</a></li>
+          <li><a href="/story/">{{> svg/icon icon='link' size=13}} {{t 'Story'}}</a></li>
+          <li><a href="/about/">{{> svg/icon icon='link' size=13}} {{t 'About'}}</a></li>
+          <li><a href="/contact/">{{> svg/icon icon='link' size=13}} {{t 'Contact'}}</a></li>
+          <li><a href="/archive/">{{> svg/icon icon='link' size=13}} {{t 'Archive'}}</a></li>
+          <li><a href="/privacy-policy/">{{> svg/icon icon='link' size=13}} {{t 'Privacy'}}</a></li>
+          <li><a href="/terms-of-service/">{{> svg/icon icon='link' size=13}} {{t 'Terms'}}</a></li>
         </ul>
       </section>
       <section class="site-widget-subscription">

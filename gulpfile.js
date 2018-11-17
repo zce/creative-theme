@@ -56,10 +56,17 @@ const script = () => {
     .pipe($.livereload())
 }
 
+const image = () => {
+  return gulp.src('assets/img/**/*.*')
+    .pipe($.plumber())
+    .pipe($.if(isProduction, $.imagemin()))
+    .pipe(gulp.dest('assets/dist'))
+    .pipe($.livereload())
+}
+
 const archive = () => {
   const source = [
     'assets/dist/**',
-    'assets/img/**',
     'locales/*.json',
     '**/*.hbs', '!node_modules/**',
     'LICENSE',
@@ -78,10 +85,11 @@ const watch = () => {
   $.livereload.listen()
   gulp.watch('assets/scss/**', style)
   gulp.watch('assets/js/**', script)
+  gulp.watch('assets/img/**/*.*', image)
   gulp.watch('**/*.hbs').on('change', p => $.livereload.changed(p))
 }
 
-const compile = gulp.parallel(style, script)
+const compile = gulp.parallel(style, script, image)
 
 /**
  * Public tasks
