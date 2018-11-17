@@ -147,7 +147,7 @@
 
 .post-tags {
   margin-bottom: spacer(4);
-  color: color('cyan');
+  color: color('pink');
   text-align: center;
 
   @include inner;
@@ -176,7 +176,7 @@
 
 .post-share {
   margin-bottom: spacer(4);
-  color: theme-color('secondary');
+  color: color('cyan');
   text-align: center;
 
   @include inner;
@@ -201,13 +201,12 @@
   @include inner;
 
   img {
-    margin-right: spacer();
     height: 5rem;
     border-radius: 50%;
   }
 
   div {
-    margin-right: auto;
+    margin: 0 spacer(3);
 
     @include link(false);
   }
@@ -219,6 +218,8 @@
   }
 
   .btn {
+    margin-left: auto;
+
     @include button-size($btn-padding-y, ($btn-padding-x * 1.4), $font-size-base, $btn-line-height, 2rem);
   }
 }
@@ -233,7 +234,7 @@
 
   .form-inline {
     justify-content: center;
-    padding: 0 spacer();
+    padding: 0 spacer(4);
   }
 
   .btn {
@@ -536,9 +537,8 @@
   @extend %lead;
 
   h2 {
-    margin-bottom: spacer();
+    margin-bottom: spacer(3);
     font-size: $display3-size;
-    // font-weight: $display3-weight;
     line-height: $display-line-height;
     opacity: 0.2;
   }

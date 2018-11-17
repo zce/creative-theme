@@ -5,7 +5,6 @@ const setup = () => {
   function loadStyle (href) {
     const linkElement = document.createElement('link')
     linkElement.rel = 'stylesheet'
-    linkElement.type = 'text/css'
     linkElement.href = href
     document.head.appendChild(linkElement)
   }
@@ -62,18 +61,18 @@ const setup = () => {
   // -----------------------------------------------------------------------------
   const codeElements = qsa('.post-content pre code')
   if (codeElements.length) {
-    // code card polyfill
-    codeElements.forEach(item => {
-      item.classList.length || item.classList.add('language-basic')
-    })
+    // // code card polyfill
+    // codeElements.forEach(item => {
+    //   item.classList.length || item.classList.add('language-none')
+    // })
 
-    loadStyle('https://unpkg.com/prismjs/themes/prism-okaidia.css')
+    // loadStyle('https://unpkg.com/prismjs/themes/prism-okaidia.css')
     loadScript('https://unpkg.com/prismjs/prism.js')
   }
 
   // gallery
   // -----------------------------------------------------------------------------
-  qsa('.kg-gallery-image img').forEach(item => {
+  qsa('.kg-gallery-image > img').forEach(item => {
     const container = item.closest('.kg-gallery-image')
     const width = item.attributes.width.value
     const height = item.attributes.height.value

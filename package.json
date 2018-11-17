@@ -35,7 +35,7 @@
   },
   "config": {
     "posts_per_page": 6,
-    "disqus_shortname": "zce-ghost",
+    "disqus_shortname": "zce-sandbox",
     "socials": {
       "weibo": "zceme",
       "github": "zce"

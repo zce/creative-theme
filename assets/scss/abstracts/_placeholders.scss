@@ -30,3 +30,7 @@
   font-weight: $lead-font-weight;
   font-size: $lead-font-size;
 }
+
+%inner {
+  @include inner();
+}

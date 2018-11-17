@@ -38,6 +38,9 @@ $body-color: #374348; // $oc-gray-8;
 
 // font
 $font-family-content: 'Mercury SSm A', 'Mercury SSm B', Georgia, serif;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$font-family-monospace: 'Fira Code', 'Source Code Pro', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+$font-family-base: $font-family-sans-serif;
 
 // headings
 // $headings-margin-bottom: 0.5em;
@@ -62,7 +65,7 @@ $content-breakpoints: (
   sm: ( padding-x: $card-spacer-x * 2, padding-y: $card-spacer-y * 2, font-size: $font-size-base * 1 ),
   md: ( padding-x: $card-spacer-x * 3, padding-y: $card-spacer-y * 3, font-size: $font-size-base * 1.125 ),
   lg: ( padding-x: $card-spacer-x * 4, padding-y: $card-spacer-y * 4, font-size: $font-size-base * 1.25 ),
-  xl: ( padding-x: $card-spacer-x * 7, padding-y: $card-spacer-y * 7, font-size: $font-size-base * 1.375 )
+  xl: ( padding-x: $card-spacer-x * 7, padding-y: $card-spacer-y * 7, font-size: $font-size-base * 1.25 )
 );
 
 // featured-img
