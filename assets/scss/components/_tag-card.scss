@@ -53,8 +53,8 @@
   }
 
   &-divider {
-    padding: spacer(2);
-    color: theme-color-level('light', 2);
+    margin: spacer(2);
+    color: theme-color('light');
   }
 
   &-list {

@@ -1,7 +1,7 @@
 <section class="tag-card"{{#if feature_image}} style="background-image: url({{feature_image}})"{{else if @blog.cover_image}} style="background-image: url({{@blog.cover_image}})"{{/if}}>
   <small class="tag-card-subtitle">{{@blog.title}}</small>
   <h3 class="tag-card-title"><a href="{{url}}">{{name}}</a></h3>
-  <div class="tag-card-divider">{{> svg/icon icon='activity' size=50 stroke=1}}</div>
+  {{> svg/icon icon='activity' class='tag-card-divider' size=50 stroke=1}}
   {{#get 'posts' filter='tags:{{slug}}+id:-{{skip}}' limit=3 as |related_posts|}}
   {{#if related_posts}}
   <ul class="tag-card-list">
