@@ -9,7 +9,6 @@
     color: $color;
 
     @include hover-focus {
-      text-decoration: none;
       opacity: 0.8;
 
       @if $underline {
