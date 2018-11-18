@@ -1,0 +1,15 @@
+{{!< default}}
+
+{{!-- TODO: Implement this template. --}}
+
+{{#post}}
+{{#contentFor 'header'}}
+<div class="site-heading container">
+  <h1 class="site-title">{{title}}</h1>
+  <p class="site-description">{{excrept}}</p>
+</div>
+{{> site-cover}}
+{{/contentFor}}
+
+{{content}}
+{{/post}}
