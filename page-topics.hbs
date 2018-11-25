@@ -16,7 +16,7 @@
     {{#foreach tags}}
     <section class="tag-card"{{#if feature_image}} style="background-image: url({{feature_image}})"{{/if}}>
       <h3 class="tag-card-title"><a href="{{url}}">{{name}}</a></h3>
-      <div class="tag-card-divider">{{> svg/icon icon='activity' size=30 stroke=1}}</div>
+      {{> svg/icon icon='activity' class='tag-card-divider' size=30 stroke=1}}
       <span class="tag-card-subtitle">{{plural count.posts empty=(t 'No posts') singular=(t '% post') plural=(t '% posts')}}</span>
     </section>
     {{/foreach}}

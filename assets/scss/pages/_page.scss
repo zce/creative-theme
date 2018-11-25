@@ -14,3 +14,42 @@
     padding-top: 0;
   }
 }
+
+.page-search {
+  .site-heading {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+
+  .results {
+    margin-bottom: spacer(5) * 2;
+
+    @include list-unstyled;
+    @extend %inner;
+
+    .item {
+      margin-bottom: spacer(4);
+    }
+
+    .title {
+      margin-bottom: spacer(2);
+      line-height: 1.2;
+    }
+
+    .link {
+      display: block;
+      margin-bottom: spacer(2);
+      font-size: $font-size-sm;
+      color: color('green');
+    }
+
+    .excerpt {
+      display: flex;
+
+      img {
+        margin-right: spacer(3);
+        height: 5rem;
+      }
+    }
+  }
+}

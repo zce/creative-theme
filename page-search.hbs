@@ -1,0 +1,34 @@
+{{!-- TODO: Search all contents by ghost-api. --}}
+
+{{!< default}}
+
+{{#contentFor 'title'}}{{meta_title}} - {{@blog.title}}{{/contentFor}}
+
+{{#contentFor 'special_class'}} no-cover{{/contentFor}}
+
+{{#post}}
+{{#contentFor 'header'}}
+<div class="site-heading container">
+  <h1 class="site-title">{{t title}}</h1>
+</div>
+{{/contentFor}}
+
+<div class="container">
+  <ul id="results" class="results"></ul>
+</div>
+{{/post}}
+
+{{#contentFor 'scripts'}}
+<script id="item_tmpl" type="test/x-template">
+<li class="item">
+  <h3 class="title"><a href="${url}">${title}</a></h3>
+  <a class="link" href="${url}">${url}</a>
+  <div class="excerpt">
+    ${ feature_image ? `<img src="${feature_image}" alt="">` : '' }
+    <p>${plaintext.substr(0, 200)}</p>
+  </div>
+</li>
+</script>
+<script src="http://unpkg.com/fuzzysort"></script>
+<script src="{{asset 'dist/search.js'}}"></script>
+{{/contentFor}}

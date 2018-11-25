@@ -13,7 +13,6 @@
 
   // pagination element
   const paginationElement = document.querySelector('.pagination')
-  if (!paginationElement) return
 
   const buffer = 300
 
@@ -40,9 +39,11 @@
     postElements.forEach(item => feedElement.appendChild(item))
     window.lazyloader && window.lazyloader.update()
 
-    // append new pagination
-    const newPaginationElement = this.response.querySelector('.pagination')
-    paginationElement.innerHTML = newPaginationElement.innerHTML
+    if (paginationElement) {
+      // append new pagination
+      const newPaginationElement = this.response.querySelector('.pagination')
+      paginationElement.innerHTML = newPaginationElement.innerHTML
+    }
 
     // push state
     window.history.pushState(null, document.title, nextElement.href)

@@ -35,7 +35,9 @@ $ cd path/to/ghost && ghost restart --development
 
 ## Features
 
-- [x] Search contents
+- [ ] Search
+  + [x] Search auto complete
+  + [ ] Search page
 - [x] Tags navigation
 - [x] Gallery preview
 - [x] Image lazyload
@@ -43,11 +45,16 @@ $ cd path/to/ghost && ghost restart --development
 - [x] I18n support
   + Activate the language in the General settings of Ghost admin, e.g. zh-CN, en
 - [x] Comments
+- [ ] Svg icon
 - [ ] Custom template
-- [ ] Custom built in template (error, amp, subscribe, private)
+  + [ ] Landing
+  + [ ] Full width
+  + [ ] Wide
+  + [ ] Course
+  + [ ] Video
+- [ ] Custom built-in template (error, amp, subscribe, private)
 - [ ] PJAX support
 - [ ] jquery & js
-- [ ] svgs & icon
 
 ## Templates
 

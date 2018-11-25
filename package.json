@@ -35,6 +35,7 @@
   },
   "config": {
     "posts_per_page": 6,
+    "meta_robots": "noindex, nofollow",
     "disqus_shortname": "zce-sandbox",
     "socials": {
       "weibo": "zceme",
