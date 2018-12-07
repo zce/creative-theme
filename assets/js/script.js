@@ -72,6 +72,8 @@ const setup = () => {
 
   // gallery
   // -----------------------------------------------------------------------------
+
+  // flex
   qsa('.kg-gallery-image > img').forEach(item => {
     const container = item.closest('.kg-gallery-image')
     const width = item.attributes.width.value
@@ -80,15 +82,27 @@ const setup = () => {
     container.style.flex = ratio + ' 1 0%'
   })
 
+  // // lightbox
+  // const galleryContainers = qsa('.kg-gallery-container')
+  // if (galleryContainers.length) {
+  //   loadStyle('https://unpkg.com/lightgallery.js/dist/css/lightgallery.min.css')
+  //   loadScript('https://unpkg.com/lightgallery.js/dist/js/lightgallery.js', () => {
+  //     galleryContainers.forEach(item => {
+  //       item.querySelectorAll('.kg-gallery-image').forEach(sub => {
+  //         sub.dataset.src = sub.children[0].src
+  //       })
+  //       window.lightGallery(item, { selector: '.kg-gallery-image' })
+  //     })
+  //   })
+  // }
+
+  // medium-zoom
   const galleryContainers = qsa('.kg-gallery-container')
   if (galleryContainers.length) {
-    loadStyle('https://unpkg.com/lightgallery.js/dist/css/lightgallery.min.css')
-    loadScript('https://unpkg.com/lightgallery.js/dist/js/lightgallery.js', () => {
-      galleryContainers.forEach(item => {
-        item.querySelectorAll('.kg-gallery-image').forEach(sub => {
-          sub.dataset.src = sub.children[0].src
-        })
-        window.lightGallery(item, { selector: '.kg-gallery-image' })
+    loadScript('https://unpkg.com/medium-zoom', () => {
+      // https://github.com/francoischalifour/medium-zoom#api
+      window.mediumZoom('.kg-gallery-image > img', {
+        margin: 20
       })
     })
   }
