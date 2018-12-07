@@ -102,7 +102,8 @@ const setup = () => {
     loadScript('https://unpkg.com/medium-zoom', () => {
       // https://github.com/francoischalifour/medium-zoom#api
       window.mediumZoom('.kg-gallery-image > img', {
-        margin: 20
+        margin: 20,
+        background: '#000'
       })
     })
   }
