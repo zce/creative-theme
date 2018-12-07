@@ -61,6 +61,6 @@
   }
 
   &::after {
-    background: linear-gradient(rgba($body-bg, 0), $body-bg), 0 / 1px url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><g style="fill:rgba(55,67,72,0.8)"><rect x="0" y="0" width="2" height="2"/><rect x="2" y="2" width="2" height="2"/></g></svg>');
+    background: linear-gradient(rgba($body-bg, 0), rgba($body-bg, 0.3) 60%, $body-bg), 0 / 1px url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><g style="fill:rgba(55,67,72,.9)"><rect x="0" y="0" width="2" height="2"/><rect x="2" y="2" width="2" height="2"/></g></svg>');
   }
 }
