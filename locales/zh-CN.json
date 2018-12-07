@@ -36,8 +36,9 @@
   "Page not found": "未找到相关页面",
   "Back to Home": "返回主页",
 
-  "by ": "by ",
-  "on ": "on ",
+  "Posted by": "发表自",
+  "Posted in": "发表于",
+  "Posted on": "发表于",
   "Share this": "分享到",
   "Authors": "作者",
   "Read <a href='{url}'>more posts</a> by this author.": "查看这个家伙的 <a href=\"{url}\">更多文章</a>。",

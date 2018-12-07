@@ -8,9 +8,9 @@
 <article class="{{post_class}} container" role="main">
   <header class="post-header">
     <div class="post-meta">
-      <span class="byline">{{authors prefix=(t 'by ') separator=(t ', ')}}</span>
+      <span class="byline" aria-label="{{t 'Posted by'}}">{{authors separator=(t ', ')}}</span>
       <span role="separator" aria-hidden="true"></span>
-      <time class="published" datetime="{{date format='YYYY-MM-DDTHH:mm:ssZ'}}">{{date timeago=true}}</time>
+      <time class="published" datetime="{{date format='YYYY-MM-DDTHH:mm:ssZ'}}" aria-label="{{t 'Posted in'}}">{{date timeago=true}}</time>
     </div>
     <h1 class="post-title">{{title}}</h1>
     <small class="post-reading-time">{{> svg/icon icon='eye' size=15}} {{reading_time minute=(t '1 min read') minutes=(t '% min read')}}</small>

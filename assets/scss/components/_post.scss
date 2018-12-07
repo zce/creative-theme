@@ -18,8 +18,8 @@
   @include link;
 
   [role=separator]::before {
-    color: theme-color-level('light', 1);
-    content: '\002f';
+    content: '\00a0\002f\00a0';
+    opacity: 0.4;
   }
 }
 

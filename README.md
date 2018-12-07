@@ -35,9 +35,6 @@ $ cd path/to/ghost && ghost restart --development
 
 ## Features
 
-- [ ] Search
-  + [x] Search auto complete
-  + [ ] Search page
 - [x] Tags navigation
 - [x] Gallery preview
 - [x] Image lazyload
@@ -45,7 +42,16 @@ $ cd path/to/ghost && ghost restart --development
 - [x] I18n support
   + Activate the language in the General settings of Ghost admin, e.g. zh-CN, en
 - [x] Comments
+- [ ] Search
+  + [x] Search auto complete
+  + [x] Search page
+  + [ ] Search app
 - [ ] Svg icon
+- [ ] Feature pages
+  + [x] Talk page
+  + [x] Topics page
+  + [x] Search page
+  + [ ] Archive page
 - [ ] Custom template
   + [ ] Landing
   + [ ] Full width
@@ -54,7 +60,7 @@ $ cd path/to/ghost && ghost restart --development
   + [ ] Video
 - [ ] Custom built-in template (error, amp, subscribe, private)
 - [ ] PJAX support
-- [ ] jquery & js
+- [ ] Pure JS
 
 ## Templates
 
@@ -64,14 +70,7 @@ $ cd path/to/ghost && ghost restart --development
 - [x] tag.hbs
 - [x] author.hbs
 - [x] page.hbs
-- [x] page-archive.hbs
-  + http://maxima.aspirethemes.com/tags/
-  + http://storymag.gbjsolution.com/tag-archive/
-- [ ] page-team.hbs
-  + http://storymag.gbjsolution.com/author-archive/
 - [x] post.hbs
-- [x] custom-full-width.hbs
-- [x] custom-wide.hbs
 - [ ] amp.hbs
 - [ ] subscribe.hbs
 - [ ] private.hbs

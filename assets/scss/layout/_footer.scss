@@ -52,7 +52,7 @@
         user-select: none;
         border: $btn-border-width solid transparent;
         @include button-size($btn-padding-x-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
-        @include button-outline-variant(theme-color-level('secondary', -2));
+        @include button-outline-variant(theme-color-level('secondary', -3));
       }
     }
   }

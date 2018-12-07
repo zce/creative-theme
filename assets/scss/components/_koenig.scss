@@ -39,8 +39,8 @@
 }
 
 .kg-gallery-container {
-  display: flex;
   // TODO: Useless flex
+  display: flex;
   flex-direction: column;
 }
 
@@ -56,21 +56,21 @@
 
   @include transition(opacity 0.3s);
   @include hover {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   img {
-    // TODO: gallery image
     width: 100%;
     height: 100%;
-    // height: auto;
-    // max-width: 100%;
 
     object-fit: cover;
   }
 }
 
 .kg-image {
+  // TODO:
+  // - Align Left
+  // - Align Right
   max-width: 100%;
 }
 

@@ -29,11 +29,14 @@ $green: $oc-green-5;
 $teal: $oc-teal-5;
 $cyan: $oc-cyan-5;
 
+// theme-colors
+$secondary: darken($gray-600, 5%);
+
 // Bootstrap variables
 @import 'node_modules/bootstrap/scss/variables';
 
 // body
-$body-bg: #f5f9fd; // #f4f8fb; // $oc-gray-0;
+$body-bg: #f4f8fb; // $oc-gray-0;
 $body-color: #374348; // $oc-gray-8;
 
 // link
@@ -57,6 +60,11 @@ $h6-font-size: 1em;
 
 // display
 $display-line-height: $headings-line-height;
+
+// navbar
+$navbar-light-color: theme-color('secondary');
+$navbar-light-hover-color: gray('700');
+$navbar-light-active-color: gray('700');
 
 // dropdown
 $dropdown-link-color: $navbar-light-color;
