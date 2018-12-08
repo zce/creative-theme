@@ -4,20 +4,24 @@
 
 .subscribe-template {
   .site-heading {
-    padding: 6vw 4vw 4vw;
+    padding: 6vw 4vw 0;
   }
 
   .site-title {
-    font-size: $display4-size;
+    @include display(4);
   }
 
   .subscribe {
     text-align: center;
-
-    @include inner(22rem);
+    padding: 0 1rem;
+    @include inner(24rem);
 
     form {
-      margin-bottom: spacer(5) * 2;
+      margin-bottom: 8vw;
+      padding: spacer(5);
+      border-radius: $card-border-radius;
+      background: $card-bg;
+      box-shadow: $box-shadow;
     }
 
     .btn {
