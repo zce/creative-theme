@@ -58,7 +58,7 @@ $ cd path/to/ghost && ghost restart --development
   + [ ] Wide
   + [ ] Course
   + [ ] Video
-- [ ] Custom built-in template (error, amp, subscribe, private)
+- [x] Custom built-in template (error, amp, subscribe, private)
 - [ ] PJAX support
 - [ ] Pure JS
 
@@ -82,9 +82,8 @@ $ cd path/to/ghost && ghost restart --development
 - [ ] custom-course.hbs
 - [ ] custom-video.hbs
 - [x] subscribe.hbs
-- [ ] private.hbs
+- [x] private.hbs
 - [x] error.hbs
--
 - [ ] robots.txt
 
 ## References
