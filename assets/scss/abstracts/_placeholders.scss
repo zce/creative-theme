@@ -2,35 +2,16 @@
 // This file contains all application-wide Sass placeholders%
 // -----------------------------------------------------------------------------
 
-%display-1 {
-  font-weight: $display1-weight;
-  font-size: $display1-size;
-  line-height: $display-line-height;
-}
-
-%display-2 {
-  font-weight: $display2-weight;
-  font-size: $display2-size;
-  line-height: $display-line-height;
-}
-
-%display-3 {
-  font-weight: $display3-weight;
-  font-size: $display3-size;
-  line-height: $display-line-height;
-}
-
-%display-4 {
-  font-weight: $display4-weight;
-  font-size: $display4-size;
-  line-height: $display-line-height;
+@each $size, $value in $displays {
+  %display-#{$size} {
+    @include display($size);
+  }
 }
 
 %lead {
-  font-weight: $lead-font-weight;
-  font-size: $lead-font-size;
+  @include lead;
 }
 
 %inner {
-  @include inner();
+  @include inner;
 }

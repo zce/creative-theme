@@ -25,8 +25,6 @@
 
 .post-title {
   font-size: $display3-size;
-  // font-weight: $font-weight-normal;
-  line-height: $display-line-height;
 }
 
 .post-reading-time {
@@ -541,7 +539,6 @@
   h2 {
     margin-bottom: spacer(4);
     font-size: $display3-size;
-    line-height: $display-line-height;
     opacity: 0.2;
   }
 }

@@ -7,13 +7,11 @@
 
 .site-nav {
   background: color('white');
-  box-shadow: 0 0 0.125rem gray('500');
-  // background: gray('900');
-  // box-shadow: 0 0 0.125rem gray('800');
 
-  // .no-cover & {
-  //   border-bottom: $border-width solid $border-color;
-  // }
+  .no-cover & {
+    border-bottom: $border-width solid $border-color;
+    // box-shadow: 0 0 0.125rem gray('500');
+  }
 
   .navbar-brand {
     @include hover-focus {

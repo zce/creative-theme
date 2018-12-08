@@ -36,8 +36,8 @@ $secondary: darken($gray-600, 5%);
 @import 'node_modules/bootstrap/scss/variables';
 
 // body
-$body-bg: #f4f8fb; // $oc-gray-0;
-$body-color: #374348; // $oc-gray-8;
+$body-bg: #f4f8fb;
+$body-color: $gray-700; // #374348;
 
 // link
 $link-hover-decoration: none;
@@ -59,7 +59,12 @@ $h5-font-size: 1.25em;
 $h6-font-size: 1em;
 
 // display
-$display-line-height: $headings-line-height;
+$displays: (
+  1: ( size: $display1-size, weight: $display1-weight ),
+  2: ( size: $display2-size, weight: $display2-weight ),
+  3: ( size: $display3-size, weight: $display3-weight ),
+  4: ( size: $display4-size, weight: $display4-weight )
+);
 
 // navbar
 $navbar-light-color: theme-color('secondary');

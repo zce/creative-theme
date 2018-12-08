@@ -3,5 +3,29 @@
 // -----------------------------------------------------------------------------
 
 .subscribe-template {
-  // TODO: .subscribe-template
+  .site-heading {
+    padding: 6vw 4vw 4vw;
+  }
+
+  .site-title {
+    font-size: $display4-size;
+  }
+
+  .subscribe {
+    text-align: center;
+    @include inner(22rem);
+
+    form {
+      margin-bottom: spacer(5) * 2;
+    }
+
+    .btn {
+      width: 100%;
+      margin-top: spacer(2);
+    }
+
+    .error-message {
+      color: color('red');
+    }
+  }
 }

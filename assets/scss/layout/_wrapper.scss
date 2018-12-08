@@ -3,7 +3,9 @@
 // -----------------------------------------------------------------------------
 
 body {
+  display: flex;
   overflow-x: hidden;
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -59,8 +61,6 @@ body {
     text-align: center;
     text-decoration: none;
     white-space: normal;
-    font-weight: $display4-weight;
-    font-size: $display4-size;
-    line-height: $display-line-height;
+    @include display(3);
   }
 }

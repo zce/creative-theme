@@ -48,3 +48,14 @@
   margin-left: auto;
   max-width: $width;
 }
+
+@mixin display ($size: 3) {
+  font-weight: map-get(map-get($displays, $size), 'weight');
+  font-size: map-get(map-get($displays, $size), 'size');
+  line-height: $display-line-height;
+}
+
+@mixin lead {
+  font-weight: $lead-font-weight;
+  font-size: $lead-font-size;
+}
