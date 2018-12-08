@@ -1,0 +1,27 @@
+{{!-- https://github.com/TryGhost/Ghost/blob/d506e8/core/server/apps/private-blogging/lib/views/private.hbs --}}
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{meta_title}}</title>
+  <link rel="shortcut icon" href="{{asset 'favicon.ico'}}">
+  <link rel="stylesheet" href="{{asset 'dist/style.css'}}">
+</head>
+<body class="{{body_class}}">
+  <header>
+    <h1 class="title">{{meta_title}}</h1>
+    {{#error}}
+    <p class="description is-error">{{t message}}</p>
+    {{else}}
+    <p class="description">{{t 'This site is private'}}</p>
+    {{/error}}
+  </header>
+
+  <form method="post">
+    <input class="form-control{{#if error}} is-invalid{{/if}}" type="password" name="password" placeholder="{{t 'Password'}}" autocomplete="off" aria-label="{{t 'Password'}}" aria-describedby="btn_submit">
+    <button class="btn btn-primary" id="btn_submit">{{t 'Enter Now'}}</button>
+  </form>
+</body>
+</html>

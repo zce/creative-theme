@@ -2,12 +2,12 @@ const setup = () => {
   const qs = document.querySelector.bind(document)
   const qsa = document.querySelectorAll.bind(document)
 
-  function loadStyle (href) {
-    const linkElement = document.createElement('link')
-    linkElement.rel = 'stylesheet'
-    linkElement.href = href
-    document.head.appendChild(linkElement)
-  }
+  // function loadStyle (href) {
+  //   const linkElement = document.createElement('link')
+  //   linkElement.rel = 'stylesheet'
+  //   linkElement.href = href
+  //   document.head.appendChild(linkElement)
+  // }
 
   function loadScript (src, callback) {
     const scriptElement = document.createElement('script')

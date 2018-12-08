@@ -68,9 +68,10 @@ pre[class*='language-'] {
 // Inline code
 :not(pre) > code[class*='language-'] {
   padding: $kbd-padding-y $kbd-padding-x;
-  white-space: normal;
   background-color: gray('800');
   color: gray('100');
+  white-space: normal;
+
   @include border-radius($border-radius-sm);
 }
 
@@ -81,6 +82,7 @@ pre {
   max-height: 70vh;
   background-color: gray('800');
   color: gray('100');
+
   @include border-radius($border-radius);
 }
 

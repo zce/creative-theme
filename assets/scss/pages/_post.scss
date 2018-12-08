@@ -4,8 +4,8 @@
 
 .post-template {
   .site-cover::before {
-    transform: translateZ(0) scale(1.0825);
     filter: blur(0.5rem);
+    transform: translateZ(0) scale(1.0825);
   }
 
   :not(.post-figure) + .post-content > .kg-card:first-child {

@@ -49,8 +49,10 @@
       a {
         display: flex;
         align-items: center;
-        user-select: none;
         border: $btn-border-width solid transparent;
+
+        user-select: none;
+
         @include button-size($btn-padding-x-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
         @include button-outline-variant(theme-color-level('secondary', -3));
       }

@@ -3,5 +3,33 @@
 // -----------------------------------------------------------------------------
 
 .private-template {
-  // TODO: .private-template
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .title {
+    @include display(4);
+  }
+
+  .description {
+    @include lead;
+  }
+
+  .is-error {
+    color: color('red');
+  }
+
+  form {
+    width: 20rem;
+    margin-bottom: spacer(5);
+    padding: spacer(5);
+    border-radius: $card-border-radius;
+    background: $card-bg;
+    box-shadow: $box-shadow;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: spacer(2);
+  }
 }

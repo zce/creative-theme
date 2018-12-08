@@ -70,11 +70,21 @@ $ cd path/to/ghost && ghost restart --development
 - [x] tag.hbs
 - [x] author.hbs
 - [x] page.hbs
+- [ ] page-archive.hbs
+- [x] page-search.hbs
+- [ ] page-team.hbs
+- [x] page-topics.hbs
 - [x] post.hbs
-- [ ] amp.hbs
-- [ ] subscribe.hbs
+- [x] amp.hbs
+- [ ] custom-landing.hbs
+- [ ] custom-full.hbs
+- [ ] custom-wide.hbs
+- [ ] custom-course.hbs
+- [ ] custom-video.hbs
+- [x] subscribe.hbs
 - [ ] private.hbs
 - [x] error.hbs
+-
 - [ ] robots.txt
 
 ## References

@@ -13,6 +13,7 @@
 
   .subscribe {
     text-align: center;
+
     @include inner(22rem);
 
     form {
@@ -20,8 +21,8 @@
     }
 
     .btn {
-      width: 100%;
       margin-top: spacer(2);
+      width: 100%;
     }
 
     .error-message {

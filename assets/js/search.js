@@ -27,7 +27,7 @@
   if (!resultElement) return
 
   // 2. enabled ghost api
-  if (!ghost) return
+  if (!window.ghost) return
 
   // 3. has search querystring named q
   const query = getQuery()[key]
@@ -45,10 +45,10 @@
   }
   document.title = document.title.replace('%', query)
 
-  const url = ghost.url.api('posts', { fields: ['url', 'title', 'feature_image'], formats: 'plaintext', absolute_urls: true })
-  fetch(url)
+  const url = window.ghost.url.api('posts', { fields: ['url', 'title', 'feature_image'], formats: 'plaintext', absolute_urls: true })
+  window.fetch(url)
     .then(response => response.json())
-    .then(resources => fuzzysort.goAsync(query, resources.posts, {
+    .then(resources => window.fuzzysort.goAsync(query, resources.posts, {
       keys: [ 'title' ],
       threshold: -3500,
       allowTypo: false
