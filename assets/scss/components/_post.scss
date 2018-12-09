@@ -228,7 +228,7 @@
   padding: 7vw 10vw;
   border: $border-width solid $border-color;
   border-radius: $border-radius;
-  background: theme-color('light');
+  background: darken($body-bg, 2.5%);
   text-align: center;
 
   .form-inline {
@@ -270,7 +270,7 @@
 }
 
 .post-related {
-  background: shade($body-bg, 2%);
+  background: darken($body-bg, 2.5%);
 }
 
 .post-feed {
@@ -294,18 +294,6 @@
   to {
     opacity: 1;
   }
-  // from {
-  //   opacity: 0.6;
-  //   transform: translate3d(0, 5rem, -1rem) scale(0.9);
-  // }
-  // 50% {
-  //   opacity: 0.5;
-  //   transform: translate3d(0, 1rem, -1.4rem) scale(0.8);
-  // }
-  // to {
-  //   opacity: 1;
-  //   transform: none;
-  // }
 }
 
 .post-card {

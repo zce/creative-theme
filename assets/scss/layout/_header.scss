@@ -48,18 +48,18 @@
   }
 
   &::before {
-    // hack ios fixed
     background: no-repeat center / cover;
     background-image: inherit;
     // hack enable GPU
     transform: translateZ(0);
 
     @include media-breakpoint-up(lg) {
+      // ios not support background-attachment: fixed
       background-attachment: fixed;
     }
   }
 
   &::after {
-    background: linear-gradient(rgba($body-bg, 0), rgba($body-bg, 0.3) 60%, $body-bg), 0 / 1px url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><g style="fill:rgba(55,67,72,.9)"><rect x="0" y="0" width="2" height="2"/><rect x="2" y="2" width="2" height="2"/></g></svg>');
+    background: $cover-overlay;
   }
 }

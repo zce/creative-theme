@@ -3,8 +3,8 @@
 // -----------------------------------------------------------------------------
 
 .private-template {
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
 
   .title {
@@ -20,16 +20,16 @@
   }
 
   form {
-    width: 20rem;
     margin-bottom: spacer(5);
     padding: spacer(5);
+    width: 20rem;
     border-radius: $card-border-radius;
     background: $card-bg;
     box-shadow: $box-shadow;
   }
 
   .btn {
-    width: 100%;
     margin-top: spacer(2);
+    width: 100%;
   }
 }
