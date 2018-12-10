@@ -1,0 +1,95 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the dropdown component.
+// -----------------------------------------------------------------------------
+
+// https://github.com/twbs/bootstrap/blob/v4.1.3/scss/_dropdown.scss
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border: $dropdown-border-width solid currentColor;
+  border-top: 0;
+  border-left: 0;
+  content: '';
+  vertical-align: 0.255em;
+  transform: rotate(45deg);
+}
+
+// The dropdown menu
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $zindex-dropdown;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  margin: $dropdown-spacer 0 0; // override default ul
+  padding: $dropdown-padding-y 0;
+  min-width: $dropdown-min-width;
+  border: $dropdown-border-width solid $dropdown-border-color;
+  background-color: $dropdown-bg;
+  background-clip: padding-box;
+  color: $body-color;
+  list-style: none;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
+
+  @include border-radius($dropdown-border-radius);
+  @include box-shadow($dropdown-box-shadow);
+}
+
+// Dividers (basically an `<hr>`) within the dropdown
+.dropdown-divider {
+  @include nav-divider($dropdown-divider-bg);
+}
+
+// Links, buttons, and more within the dropdown menu
+//
+// `<button>`-specific styles are denoted with `// For <button>s`
+.dropdown-item {
+  display: block;
+  clear: both;
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  width: 100%; // For `<button>`s
+  border: 0; // For `<button>`s
+  background-color: transparent; // For `<button>`s
+  color: $dropdown-link-color;
+  text-align: inherit; // For `<button>`s
+  white-space: nowrap; // prevent links from randomly breaking onto new lines
+  font-weight: $font-weight-normal;
+
+  @include hover-focus {
+    color: $dropdown-link-hover-color;
+    text-decoration: none;
+
+    @include gradient-bg($dropdown-link-hover-bg);
+  }
+
+  &.active,
+  &:active {
+    color: $dropdown-link-active-color;
+    text-decoration: none;
+
+    @include gradient-bg($dropdown-link-active-bg);
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: transparent;
+    color: $dropdown-link-disabled-color;
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+}
+
+.dropdown-menu.show {
+  display: block;
+}

@@ -25,3 +25,48 @@
 @function shade($color, $percentage) {
   @return mix(black, $color, $percentage);
 }
+
+/// Url encode input
+/// @access public
+/// @param {String} $input - input string
+/// @return {String} Url encode input
+@function url-encode($input) {
+  $map: (
+  '%': '%25',
+  '<': '%3C',
+  '>': '%3E',
+  ' ': '%20',
+  '!': '%21',
+  '*': '%2A',
+  '\'': '%27',
+  '"': '%22',
+  '(': '%28',
+  ')': '%29',
+  ';': '%3B',
+  ':': '%3A',
+  '@': '%40',
+  '&': '%26',
+  '=': '%3D',
+  '+': '%2B',
+  '$': '%24',
+  ',': '%2C',
+  '/': '%2F',
+  '?': '%3F',
+  '#': '%23',
+  '[': '%5B',
+  ']': '%5D'
+  );
+  $new: $input;
+  @each $search, $replace in $map {
+    $new: str-replace($new, $search, $replace);
+  }
+  @return $new;
+}
+
+/// Svg code to data uri
+/// @access public
+/// @param {String} $input - Svg code
+/// @return {String} data uri
+@function inline-svg($svg) {
+  @return url('data:image/svg+xml;charset=utf-8,#{url-encode($svg)}');
+}

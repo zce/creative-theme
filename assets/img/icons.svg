@@ -66,6 +66,22 @@
       <path d="M16 25.333v-18.667"></path>
       <path d="M6.667 16l9.333-9.333 9.333 9.333"></path>
     </symbol>
+    <symbol id="chevron-down" viewBox="0 0 32 32">
+      <title>chevron-down</title>
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M8 12l8 8 8-8"></path>
+    </symbol>
+    <symbol id="chevron-left" viewBox="0 0 32 32">
+      <title>chevron-left</title>
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M20 24l-8-8 8-8"></path>
+    </symbol>
+    <symbol id="chevron-right" viewBox="0 0 32 32">
+      <title>chevron-right</title>
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M12 24l8-8-8-8"></path>
+    </symbol>
+    <symbol id="chevron-up" viewBox="0 0 32 32">
+      <title>chevron-up</title>
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M24 20l-8-8-8 8"></path>
+    </symbol>
     <symbol id="download" viewBox="0 0 32 32">
       <title>download</title>
       <path d="M28 20v5.333c0 1.473-1.194 2.667-2.667 2.667v0h-18.667c-1.473 0-2.667-1.194-2.667-2.667v0-5.333"></path>

@@ -13,6 +13,18 @@
     </div>
     {{/get}}
   </li>
+  {{!-- TODO: Add a navigation item call `authors` to display a dropdown with all authors --}}
+  {{else has slug='authors'}}
+  <li class="nav-item nav-{{slug}} dropdown" role="menuitem">
+    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">{{t label}}</a>
+    {{#get 'users'}}
+    <div class="dropdown-menu">
+      {{#foreach users}}
+      <a class="dropdown-item" href="{{url}}">{{name}}</a>
+      {{/foreach}}
+    </div>
+    {{/get}}
+  </li>
   {{else}}
   <li class="nav-item nav-{{slug}}{{#if current}} active{{/if}}" role="menuitem">
     <a class="nav-link" href="{{url absolute=true}}"{{#if current}} aria-current="page"{{/if}}>{{t label}}</a>
