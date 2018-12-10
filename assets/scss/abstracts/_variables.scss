@@ -75,6 +75,13 @@ $navbar-light-active-color: gray('700');
 $dropdown-link-color: $navbar-light-color;
 $dropdown-link-hover-color: $navbar-light-hover-color;
 
+$dropdown-link-color: $navbar-light-color;
+$dropdown-link-hover-color: $navbar-light-hover-color;
+$dropdown-link-hover-bg: gray('100');
+
+$dropdown-link-active-color: $dropdown-link-hover-color;
+$dropdown-link-active-bg: gray('200');
+
 // cover
 $cover-overlay: linear-gradient(rgba($body-bg, 0), rgba($body-bg, 0.4) 60%, $body-bg), 0 / 1px url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><g style="fill:rgba(55,67,72,.9)"><rect x="0" y="0" width="2" height="2"/><rect x="2" y="2" width="2" height="2"/></g></svg>');
 
