@@ -76,10 +76,11 @@ $ cd path/to/ghost && ghost restart --development
 - [x] page-topics.hbs
 - [x] post.hbs
 - [x] amp.hbs
-- [ ] custom-landing.hbs
-- [ ] custom-full.hbs
-- [ ] custom-wide.hbs
-- [ ] custom-video.hbs
+- [x] custom-landing.hbs
+- [x] custom-full.hbs
+- [x] custom-wide.hbs
+- [ ] custom-course.hbs
+- [x] custom-video.hbs
 - [x] subscribe.hbs
 - [x] private.hbs
 - [x] error.hbs
