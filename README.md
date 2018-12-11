@@ -79,7 +79,6 @@ $ cd path/to/ghost && ghost restart --development
 - [ ] custom-landing.hbs
 - [ ] custom-full.hbs
 - [ ] custom-wide.hbs
-- [ ] custom-course.hbs
 - [ ] custom-video.hbs
 - [x] subscribe.hbs
 - [x] private.hbs

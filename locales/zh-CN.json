@@ -37,8 +37,10 @@
   "Back to Home": "返回主页",
 
   "Posted by": "发表自",
-  "Posted in": "发表于",
+  "Posted in": "发表在",
   "Posted on": "发表于",
+  "Published at": "发布于",
+  "Updated at": "更新于",
   "Share this": "分享到",
   "Authors": "作者",
   "Read <a href='{url}'>more posts</a> by this author.": "查看这个家伙的 <a href=\"{url}\">更多文章</a>。",

@@ -1,9 +1,20 @@
-{{!-- TODO: Implement video template. --}}
-
 {{!< default}}
 
+{{!-- TODO: Implement video template. --}}
+
+{{#contentFor 'class'}}video-template{{/contentFor}}
+
 {{#post}}
-<article class="{{post_class}} container" role="main">
+<article class="video container" role="main">
   {{content}}
+  <ul class="video-meta">
+    <li>{{t 'Published at'}}: <time class="published" datetime="{{date format='YYYY-MM-DDTHH:mm:ssZ'}}">{{date format='YYYY-MM-DD HH:mm'}}</time></li>
+    <li>{{t 'Updated at'}}: <time class="updated" datetime="{{date updated_at format='YYYY-MM-DDTHH:mm:ssZ'}}">{{date updated_at format='YYYY-MM-DD HH:mm'}}</time></li>
+    <li>{{t 'Authors'}}: {{authors}}</li>
+  </ul>
 </article>
+<section class="post-comments">
+  <h3 class="sr-only">{{t 'Leave a Reply'}}</h3>
+  {{> comments}}
+</section>
 {{/post}}
