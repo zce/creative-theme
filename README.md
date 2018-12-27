@@ -122,10 +122,6 @@ $ cd path/to/ghost && ghost restart --development
 
 <!--
 
-- current: 8e865b797b24ee8115a6238d637815a4a68edeae
-https://github.com/TryGhost/Casper/compare/8e865b797b24ee8115a6238d637815a4a68edeae...master
-- current: 8a9efb5ef1b2caeaf4d09621490359dfc0646024
-https://github.com/TryGhost/Casper/compare/8a9efb5ef1b2caeaf4d09621490359dfc0646024...master
 - current: f695d69aeb6443c3d063d71557529d992ee7ca52
 https://github.com/TryGhost/Casper/compare/f695d69aeb6443c3d063d71557529d992ee7ca52...master
 
