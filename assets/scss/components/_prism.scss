@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the prism code component.
+// -----------------------------------------------------------------------------
+
+// TODO:
+// - colors
+
+.token {
+  &.comment,
+  &.prolog,
+  &.doctype,
+  &.cdata {
+    color: gray('600');
+  }
+
+  &.punctuation {
+    color: gray('300');
+  }
+
+  &.property,
+  &.tag,
+  &.constant,
+  &.symbol,
+  &.deleted {
+    color: color('red');
+  }
+
+  &.boolean,
+  &.number {
+    color: color('purple');
+  }
+
+  &.selector,
+  &.attr-name,
+  &.string,
+  &.char,
+  &.builtin,
+  &.inserted {
+    color: color('teal');
+  }
+
+  &.operator,
+  &.variable,
+  &.entity,
+  &.url,
+  .language-css &.string,
+  .style &.string {
+    color: gray('100');
+  }
+
+  &.atrule,
+  &.attr-value,
+  &.function,
+  &.class-name {
+    color: color('yellow');
+  }
+
+  &.keyword {
+    color: color('cyan');
+  }
+
+  &.regex,
+  &.important {
+    color: color('orange');
+  }
+
+  &.important,
+  &.bold {
+    font-weight: $font-weight-bold;
+  }
+
+  &.italic {
+    font-style: italic;
+  }
+
+  &.entity {
+    cursor: help;
+  }
+}
+
+.namespace {
+  opacity: 0.7;
+}

@@ -2,7 +2,7 @@
 // This file contains code styles.
 // -----------------------------------------------------------------------------
 
-// https://github.com/twbs/bootstrap/blob/v4.1.3/scss/_code.scss
+// https://github.com/twbs/bootstrap/blob/v4.2.1/scss/_code.scss
 
 // Inline code
 code {
@@ -84,81 +84,4 @@ pre {
   color: gray('100');
 
   @include border-radius($border-radius);
-}
-
-.token {
-  &.comment,
-  &.prolog,
-  &.doctype,
-  &.cdata {
-    color: gray('600');
-  }
-
-  &.punctuation {
-    color: gray('300');
-  }
-
-  &.property,
-  &.tag,
-  &.constant,
-  &.symbol,
-  &.deleted {
-    color: color('red');
-  }
-
-  &.boolean,
-  &.number {
-    color: color('purple');
-  }
-
-  &.selector,
-  &.attr-name,
-  &.string,
-  &.char,
-  &.builtin,
-  &.inserted {
-    color: color('teal');
-  }
-
-  &.operator,
-  &.variable,
-  &.entity,
-  &.url,
-  .language-css &.string,
-  .style &.string {
-    color: gray('100');
-  }
-
-  &.atrule,
-  &.attr-value,
-  &.function,
-  &.class-name {
-    color: color('yellow');
-  }
-
-  &.keyword {
-    color: color('cyan');
-  }
-
-  &.regex,
-  &.important {
-    color: color('orange');
-  }
-
-  &.important,
-  &.bold {
-    font-weight: $font-weight-bold;
-  }
-
-  &.italic {
-    font-style: italic;
-  }
-
-  &.entity {
-    cursor: help;
-  }
-}
-
-.namespace {
-  opacity: 0.7;
 }

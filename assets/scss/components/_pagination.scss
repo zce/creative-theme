@@ -3,10 +3,13 @@
 // -----------------------------------------------------------------------------
 
 .pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: spacer(5);
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .number {
     margin: 0 spacer(4);

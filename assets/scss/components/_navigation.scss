@@ -2,32 +2,20 @@
 // This file contains all styles related to the nav component.
 // -----------------------------------------------------------------------------
 
-// https://github.com/twbs/bootstrap/blob/v4.1.3/scss/_nav.scss
-
-.navbar-nav {
-  display: flex;
-  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-
-  .dropdown-menu {
-    position: static;
-    float: none;
-  }
-}
+// https://github.com/twbs/bootstrap/blob/v4.2.1/scss/_nav.scss
 
 .nav-link {
   display: block;
   padding: $nav-link-padding-y $nav-link-padding-x;
-  color: $navbar-light-color;
 
   @include hover-focus {
-    color: $navbar-light-hover-color;
     text-decoration: none;
   }
 
-  .active > & {
-    color: $navbar-light-active-color;
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
   }
 }

@@ -2,7 +2,7 @@
 // This file contains all styles related to the dropdown component.
 // -----------------------------------------------------------------------------
 
-// https://github.com/twbs/bootstrap/blob/v4.1.3/scss/_dropdown.scss
+// https://github.com/twbs/bootstrap/blob/v4.2.1/scss/_dropdown.scss
 
 .dropdown {
   position: relative;
@@ -71,6 +71,14 @@
     @include gradient-bg($dropdown-link-hover-bg);
   }
 
+  &:first-child {
+    @include border-top-radius($dropdown-inner-border-radius);
+  }
+
+  &:last-child {
+    @include border-bottom-radius($dropdown-inner-border-radius);
+  }
+
   &.active,
   &:active {
     color: $dropdown-link-active-color;
@@ -83,6 +91,7 @@
   &:disabled {
     background-color: transparent;
     color: $dropdown-link-disabled-color;
+    pointer-events: none;
     // Remove CSS gradients if they're enabled
     @if $enable-gradients {
       background-image: none;
