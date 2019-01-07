@@ -23,7 +23,7 @@
 
 <body class="{{#block 'class'}}{{body_class}}{{/block}}{{block 'special_class'}}">
 
-  <div class="site-spinner" aria-hidden="true"></div>
+  <div class="site-spinner" role="status" aria-hidden="true"></div>
 
   <a class="site-skiplink" href="#main">{{t 'Skip to main content'}}</a>
 
@@ -33,7 +33,7 @@
 
   {{> site-footer}}
 
-  <script src="https://unpkg.com/jquery"></script>
+  <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
   <script src="{{asset 'dist/plugins.js'}}"></script>
   <script src="{{asset 'dist/script.js'}}"></script>
 

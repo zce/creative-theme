@@ -20,7 +20,7 @@ const setup = () => {
   // -----------------------------------------------------------------------------
   const inputElement = qs('#search_input')
   if (inputElement) {
-    loadScript('https://unpkg.com/ghost-search/dist/ghost-search.js', () => {
+    loadScript('https://unpkg.com/ghost-search', () => {
       const resultElement = document.createElement('div')
       resultElement.id = 'search_result'
       resultElement.className = 'dropdown-menu dropdown-menu-right'
@@ -50,7 +50,7 @@ const setup = () => {
   // img lazyload
   // -----------------------------------------------------------------------------
   if (qs('.post-card [data-src]')) {
-    loadScript('https://unpkg.com/vanilla-lazyload', () => {
+    loadScript('https://unpkg.com/vanilla-lazyload@8.17.0/dist/lazyload.min.js', () => {
       window.lazyloader = new window.LazyLoad({
         elements_selector: '.post-card [data-src]'
       })
@@ -66,8 +66,8 @@ const setup = () => {
     //   item.classList.length || item.classList.add('language-none')
     // })
 
-    // loadStyle('https://unpkg.com/prismjs/themes/prism-okaidia.css')
-    loadScript('https://unpkg.com/prismjs/prism.js')
+    // loadStyle('https://unpkg.com/prismjs@1.15.0/themes/prism-okaidia.css')
+    loadScript('https://unpkg.com/prismjs@1.15.0/prism.js')
   }
 
   // gallery
@@ -85,8 +85,8 @@ const setup = () => {
   // // lightbox
   // const galleryContainers = qsa('.kg-gallery-container')
   // if (galleryContainers.length) {
-  //   loadStyle('https://unpkg.com/lightgallery.js/dist/css/lightgallery.min.css')
-  //   loadScript('https://unpkg.com/lightgallery.js/dist/js/lightgallery.js', () => {
+  //   loadStyle('https://unpkg.com/lightgallery.js@1.1.2/dist/css/lightgallery.min.css')
+  //   loadScript('https://unpkg.com/lightgallery.js@1.1.2/dist/js/lightgallery.min.js', () => {
   //     galleryContainers.forEach(item => {
   //       item.querySelectorAll('.kg-gallery-image').forEach(sub => {
   //         sub.dataset.src = sub.children[0].src
@@ -99,7 +99,7 @@ const setup = () => {
   // medium-zoom
   const galleryContainers = qsa('.kg-gallery-container')
   if (galleryContainers.length) {
-    loadScript('https://unpkg.com/medium-zoom', () => {
+    loadScript('https://unpkg.com/medium-zoom@1.0.2/dist/medium-zoom.min.js', () => {
       // https://github.com/francoischalifour/medium-zoom#api
       window.mediumZoom('.kg-gallery-image > img', {
         margin: 20,
@@ -130,9 +130,23 @@ const setup = () => {
     e.preventDefault()
   }))
 
+  // subscribe hidden form value
+  // -----------------------------------------------------------------------------
+  qsa('input[name=location]').forEach(item => { item.value = item.value || window.location.href })
+  qsa('input[name=referrer]').forEach(item => { item.value = item.value || document.referrer })
+
+  // site preloader
+  // -----------------------------------------------------------------------------
+  const spinner = qs('.site-spinner')
+  if (spinner) {
+    // remove loader spinner
+    spinner.style.opacity = 0
+    setTimeout(() => spinner.parentElement.removeChild(spinner), 1000)
+  }
+
   // pjax
   // -----------------------------------------------------------------------------
-  // // https://unpkg.com/jquery-pjax
+  // // https://unpkg.com/jquery-pjax@2.0.1/jquery.pjax.js
   // $(document).pjax('a[href]', 'body', { fragment: 'body' })
   // qsa('a[href]').forEach(item => item.addEventListener('click', e => {
   //   const url = e.currentTarget.href
@@ -157,20 +171,6 @@ const setup = () => {
 
   //   e.preventDefault()
   // }))
-
-  // subscribe hidden form value
-  // -----------------------------------------------------------------------------
-  qsa('input[name=location]').forEach(item => { item.value = item.value || window.location.href })
-  qsa('input[name=referrer]').forEach(item => { item.value = item.value || document.referrer })
-
-  // site preloader
-  // -----------------------------------------------------------------------------
-  const spinner = qs('.site-spinner')
-  if (spinner) {
-    // remove loader spinner
-    spinner.style.opacity = 0
-    setTimeout(() => spinner.parentElement.removeChild(spinner), 1000)
-  }
 }
 
 window.addEventListener('load', setup)
