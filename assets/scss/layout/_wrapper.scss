@@ -20,7 +20,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: $body-bg;
-  // cursor: wait;
+  cursor: wait;
 
   @include transition(opacity 0.3s);
 
@@ -37,7 +37,7 @@ body {
     display: block;
     width: 3rem;
     height: 3rem;
-    border: 0.25rem solid rgba(theme-color('primary'), 0.15);
+    border: 0.125rem solid rgba(theme-color('primary'), 0.15);
     border-top-color: rgba(theme-color('primary'), 0.8);
     border-radius: 100%;
     content: '';

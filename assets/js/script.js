@@ -141,7 +141,7 @@ const setup = () => {
   if (spinner) {
     // remove loader spinner
     spinner.style.opacity = 0
-    setTimeout(() => spinner.parentElement.removeChild(spinner), 1000)
+    setTimeout(() => spinner.parentElement.removeChild(spinner), 500)
   }
 
   // pjax
