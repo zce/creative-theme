@@ -8,9 +8,8 @@
   }
 
   .site-cover {
-    bottom: 0;
     padding-top: 0;
-    min-height: auto;
+    min-height: 100%;
 
     &::after {
       display: none;
