@@ -28,7 +28,7 @@
           <li><a href="#" title="{{t 'WeChat'}}" target="_blank" rel="noopener">{{> svg/brand icon='weixin' size=14}}</a></li>
           <li><a href="#" title="{{t 'QQ'}}" target="_blank" rel="noopener">{{> svg/brand icon='qq' size=14}}</a></li>
           <li><a href="https://i.youku.com/zcezce" title="{{t 'YouKu'}}" target="_blank" rel="noopener">{{> svg/brand icon='youku' size=14}}</a></li>
-          <li><a href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" title="{{t 'RSS'}}" target="_blank" rel="noopener">{{> svg/icon icon='rss'}}</a></li>
+          <li><a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="{{t 'RSS'}}" target="_blank" rel="noopener">{{> svg/icon icon='rss'}}</a></li>
         </ul>
       </section>
       <section class="site-widget-tags">
@@ -61,7 +61,7 @@
     </aside>
     <div class="site-info">
       {{!-- Proudly powered by Ghost / Proudly published with Ghost --}}
-      <span>{{{t '&copy; {year} <a href=\'{url}\'>{title}</a>. All Rights Reserved.' year=(date format='YYYY') url=@blog.url title=@blog.title}}}</span>
+      <span>{{{t '&copy; {year} <a href=\'{url}\'>{title}</a>. All Rights Reserved.' year=(date format='YYYY') url=@site.url title=@site.title}}}</span>
       <ul>
         <li><a href="/privacy-policy/">{{t 'Privacy Policy'}}</a></li>
         <li><a href="/terms-of-service/">{{t 'Terms of Service'}}</a></li>

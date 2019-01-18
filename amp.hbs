@@ -20,7 +20,7 @@
   {{#post}}
   <header class="main-header">
     <nav class="blog-title">
-      <a href="{{@blog.url}}">{{@blog.title}}</a>
+      <a href="{{@site.url}}">{{@site.title}}</a>
     </nav>
   </header>
 
@@ -46,7 +46,7 @@
   {{/post}}
 
   <footer class="site-footer clearfix">
-    <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format='YYYY'}}</section>
+    <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format='YYYY'}}</section>
     <section class="poweredby">{{t 'Proudly published with Ghost'}}</section>
   </footer>
 </body>

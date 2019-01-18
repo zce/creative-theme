@@ -1,6 +1,6 @@
 {{!< default}}
 
-{{#contentFor 'title'}}{{t 'Subscribe'}} - {{@blog.title}}{{/contentFor}}
+{{#contentFor 'title'}}{{t 'Subscribe'}} - {{@site.title}}{{/contentFor}}
 
 {{#contentFor 'class'}}subscribe-template no-cover{{/contentFor}}
 
@@ -9,14 +9,14 @@
   {{#if success}}
   <h1 class="site-title">{{t 'Subscribed!'}}</h1>
   {{else}}
-  <h1 class="site-title">{{t 'Subscribe to {title}' title=@blog.title}}</h1>
+  <h1 class="site-title">{{t 'Subscribe to {title}' title=@site.title}}</h1>
   {{/if}}
 </div>
 {{/contentFor}}
 
 <div class="subscribe">
   {{#if success}}
-  <p>{{{t 'You\'ve successfully subscribed to <em>{title}</em> with the email address <em>{email}</em>.' title=@blog.title email=email}}}</p>
+  <p>{{{t 'You\'ve successfully subscribed to <em>{title}</em> with the email address <em>{email}</em>.' title=@site.title email=email}}}</p>
   {{else}}
   {{#error}}<p class="error-message">{{t message}}</p>{{/error}}
   <p>{{t 'Get the latest posts delivered right to your inbox.'}}</p>

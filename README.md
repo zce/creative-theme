@@ -122,8 +122,9 @@ $ cd path/to/ghost && ghost restart --development
 
 <!--
 
-- current: f695d69aeb6443c3d063d71557529d992ee7ca52
-https://github.com/TryGhost/Casper/compare/f695d69aeb6443c3d063d71557529d992ee7ca52...master
+https://github.com/TryGhost/Casper/compare/0171b3e05b00c1a3327bd6ae20a6672d7142fa3d...master
+
+- https://github.com/TryGhost/Casper/compare/f695d69aeb6443c3d063d71557529d992ee7ca52...master
 
 {{!-- &laquo; Bad value cleartype for attribute http-equiv on element meta. &raquo; --}}
 {{!-- <meta http-equiv="cleartype" content="on" /> --}}

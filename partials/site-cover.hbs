@@ -2,8 +2,8 @@
 <div class="site-cover" style="background-image: url({{feature_image}})" aria-hidden="true"></div>
 {{else if cover_image}}
 <div class="site-cover" style="background-image: url({{cover_image}})" aria-hidden="true"></div>
-{{else if @blog.cover_image}}
-<div class="site-cover" style="background-image: url({{@blog.cover_image}})" aria-hidden="true"></div>
+{{else if @site.cover_image}}
+<div class="site-cover" style="background-image: url({{@site.cover_image}})" aria-hidden="true"></div>
 {{else}}
 {{#contentFor 'special_class'}} no-cover{{/contentFor}}
 {{/if}}
