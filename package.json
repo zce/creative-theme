@@ -72,7 +72,7 @@
   },
   "engines": {
     "ghost": ">=2.10.0",
-    "ghost-api": "v2"
+    "ghost-api": "v0.1"
   },
   "demo": "https://creative.zce.me",
   "gpm": {
