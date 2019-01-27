@@ -20,7 +20,7 @@ const setup = () => {
   // -----------------------------------------------------------------------------
   const inputElement = qs('#search_input')
   if (inputElement) {
-    loadScript('https://unpkg.com/ghost-search', () => {
+    loadScript('https://unpkg.com/ghost-search@1.0.0/dist/ghost-search.min.js', () => {
       const resultElement = document.createElement('div')
       resultElement.id = 'search_result'
       resultElement.className = 'dropdown-menu dropdown-menu-right'

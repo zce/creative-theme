@@ -15,7 +15,7 @@
   // Disabled state lightens text
   &.disabled {
     color: $nav-link-disabled-color;
-    pointer-events: none;
     cursor: default;
+    pointer-events: none;
   }
 }

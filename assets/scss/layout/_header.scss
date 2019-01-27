@@ -50,6 +50,7 @@
   &::before {
     background: no-repeat center / cover;
     background-image: inherit;
+    background-color: theme-color('dark');
     // hack enable GPU
     transform: translateZ(0);
 

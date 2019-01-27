@@ -94,7 +94,8 @@
 {{/if}}
 {{/get}}
 
-{{#get 'posts' slug='about' fields='title,html' as |about|}}
+{{!-- https://github.com/TryGhost/Ghost/issues/10390#issuecomment-456027857 --}}
+{{#get 'pages' slug='about' fields='title,html' as |about|}}
 {{#about}}
 <section class="site-section">
   <div class="container">
