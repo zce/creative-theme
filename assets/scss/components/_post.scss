@@ -310,7 +310,7 @@
   @include transition(box-shadow 0.3s, transform 0.3s);
   @include hover {
     box-shadow: $box-shadow-lg;
-    transform: translateZ(-1px) scale(1.02);
+    transform: translateZ(1px) scale(1.02);
   }
 
   .row > & {
