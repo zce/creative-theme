@@ -17,7 +17,7 @@
   {{else has slug='authors'}}
   <li class="nav-item nav-{{slug}} dropdown" role="menuitem">
     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">{{t label}}</a>
-    {{#get 'users'}}
+    {{#get 'authors'}}
     <div class="dropdown-menu">
       {{#foreach users}}
       <a class="dropdown-item" href="{{url}}">{{name}}</a>

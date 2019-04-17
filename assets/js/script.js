@@ -20,7 +20,7 @@ const setup = () => {
   // -----------------------------------------------------------------------------
   const inputElement = qs('#search_input')
   if (inputElement) {
-    loadScript('https://unpkg.com/ghost-search@1.0.0/dist/ghost-search.min.js', () => {
+    loadScript('https://unpkg.com/ghost-search@1.0.1/dist/ghost-search.min.js', () => {
       const resultElement = document.createElement('div')
       resultElement.id = 'search_result'
       resultElement.className = 'dropdown-menu dropdown-menu-right'
@@ -34,6 +34,7 @@ const setup = () => {
         results: '#search_result',
         template: i => `<a class="dropdown-item" href="${i.url}">${i.title}</a>`,
         api: {
+          resource: 'posts',
           parameters: { fields: ['url', 'title'] }
         },
         on: {
@@ -50,7 +51,7 @@ const setup = () => {
   // img lazyload
   // -----------------------------------------------------------------------------
   if (qs('.post-card [data-src]')) {
-    loadScript('https://unpkg.com/vanilla-lazyload@8.17.0/dist/lazyload.min.js', () => {
+    loadScript('https://unpkg.com/vanilla-lazyload@12.0.0-beta.0/dist/lazyload.min.js', () => {
       window.lazyloader = new window.LazyLoad({
         elements_selector: '.post-card [data-src]'
       })
@@ -67,7 +68,7 @@ const setup = () => {
     // })
 
     // loadStyle('https://unpkg.com/prismjs@1.15.0/themes/prism-okaidia.css')
-    loadScript('https://unpkg.com/prismjs@1.15.0/prism.js')
+    loadScript('https://unpkg.com/prismjs@1.16.0/prism.js')
   }
 
   // gallery
@@ -99,7 +100,7 @@ const setup = () => {
   // medium-zoom
   const galleryContainers = qsa('.kg-gallery-container')
   if (galleryContainers.length) {
-    loadScript('https://unpkg.com/medium-zoom@1.0.2/dist/medium-zoom.min.js', () => {
+    loadScript('https://unpkg.com/medium-zoom@1.0.4/dist/medium-zoom.min.js', () => {
       // https://github.com/francoischalifour/medium-zoom#api
       window.mediumZoom('.kg-gallery-image > img', {
         margin: 20,
