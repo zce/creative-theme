@@ -20,30 +20,34 @@ const setup = () => {
   // -----------------------------------------------------------------------------
   const inputElement = qs('#search_input')
   if (inputElement) {
-    loadScript('https://unpkg.com/ghost-search@1.0.1/dist/ghost-search.min.js', () => {
-      const resultElement = document.createElement('div')
-      resultElement.id = 'search_result'
-      resultElement.className = 'dropdown-menu dropdown-menu-right'
-      resultElement.innerHTML = `<span class="dropdown-item disabled">${inputElement.placeholder}</span>`
-      inputElement.parentElement.classList.add('dropdown')
-      inputElement.parentElement.appendChild(resultElement)
+    loadScript('https://unpkg.com/@tryghost/content-api@1.2.1/umd/content-api.min.js', () => {
+      loadScript('https://unpkg.com/ghost-search@1.0.1/dist/ghost-search.min.js', () => {
+        const resultElement = document.createElement('div')
+        resultElement.id = 'search_result'
+        resultElement.className = 'dropdown-menu dropdown-menu-right'
+        resultElement.innerHTML = `<span class="dropdown-item disabled">${inputElement.placeholder}</span>`
+        inputElement.parentElement.classList.add('dropdown')
+        inputElement.parentElement.appendChild(resultElement)
 
-      /* eslint-disable no-new */
-      new window.GhostSearch({
-        input: '#search_input',
-        results: '#search_result',
-        template: i => `<a class="dropdown-item" href="${i.url}">${i.title}</a>`,
-        api: {
-          resource: 'posts',
-          parameters: { fields: ['url', 'title'] }
-        },
-        on: {
-          afterDisplay: results => {
-            if (results.total !== 0) return false
-            if (!inputElement.value) return false
-            resultElement.innerHTML = `<span class="dropdown-item disabled">${inputElement.dataset['empty']}</span>`
+        /* eslint-disable no-new */
+        new window.GhostSearch({
+          host: window.location.origin,
+          key: '72e50cdab47d696e88d20aca0c',
+          input: '#search_input',
+          results: '#search_result',
+          template: i => `<a class="dropdown-item" href="${i.url}">${i.title}</a>`,
+          api: {
+            resource: 'posts',
+            parameters: { fields: ['url', 'title'] }
+          },
+          on: {
+            afterDisplay: results => {
+              if (results.total !== 0) return false
+              if (!inputElement.value) return false
+              resultElement.innerHTML = `<span class="dropdown-item disabled">${inputElement.dataset['empty']}</span>`
+            }
           }
-        }
+        })
       })
     })
   }

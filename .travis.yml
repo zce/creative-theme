@@ -11,6 +11,7 @@ notifications:
     on_failure: change
 
 script:
+  - yarn lint
   - yarn test
   - yarn build
   - yarn release

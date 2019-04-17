@@ -44,6 +44,11 @@
   @include box-shadow($dropdown-box-shadow);
 }
 
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
 // Dividers (basically an `<hr>`) within the dropdown
 .dropdown-divider {
   @include nav-divider($dropdown-divider-bg);

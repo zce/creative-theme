@@ -4,15 +4,15 @@
   "description": "A personal blogging theme for Ghost, inspired by Casper.",
   "keywords": [
     "creative",
-    "ghost-theme",
     "ghost",
+    "ghost-theme",
     "theme",
     "zce"
   ],
   "homepage": "https://github.com/zce/creative#readme",
   "bugs": {
-    "email": "w@zce.me",
-    "url": "https://github.com/zce/creative/issues"
+    "url": "https://github.com/zce/creative/issues",
+    "email": "w@zce.me"
   },
   "repository": {
     "type": "git",
@@ -25,18 +25,18 @@
     "url": "https://zce.me"
   },
   "scripts": {
-    "lint:js": "standard assets/js/*.js gulpfile.js",
-    "lint:scss": "csscomb -c assets/scss/.csscomb.json assets/scss",
-    "lint": "yarn lint:js && yarn lint:scss",
-    "test": "yarn lint && gscan .",
+    "dev": "gulp develop",
     "build": "gulp build",
     "release": "gulp release --production",
-    "dev": "gulp develop"
+    "lint": "yarn lint:js && yarn lint:scss",
+    "lint:js": "standard assets/js/*.js gulpfile.js",
+    "lint:scss": "csscomb -c assets/scss/.csscomb.json assets/scss",
+    "test": "gscan ."
   },
   "config": {
-    "posts_per_page": 6,
-    "meta_robots": "noindex, nofollow",
     "disqus_shortname": "zce-sandbox",
+    "meta_robots": "noindex, nofollow",
+    "posts_per_page": 6,
     "socials": {
       "weibo": "zceme",
       "github": "zce"
