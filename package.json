@@ -61,7 +61,7 @@
     "gulp-if": "2.0.2",
     "gulp-imagemin": "5.0.3",
     "gulp-livereload": "4.0.1",
-    "gulp-load-plugins": "1.6.0",
+    "gulp-load-plugins": "2.0.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "8.0.0",
     "gulp-sass": "4.0.2",
