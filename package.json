@@ -55,7 +55,7 @@
     "cssnano": "4.1.10",
     "del": "4.1.1",
     "gscan": "2.6.2",
-    "gulp": "4.0.0",
+    "gulp": "4.0.2",
     "gulp-babel": "8.0.0",
     "gulp-header": "2.0.7",
     "gulp-if": "2.0.2",
