@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "bootstrap": "4.3.1",
-    "open-color": "1.6.3"
+    "open-color": "1.7.0"
   },
   "devDependencies": {
     "@babel/core": "7.5.0",
