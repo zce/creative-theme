@@ -49,7 +49,7 @@
   window.fetch(url)
     .then(response => response.json())
     .then(resources => window.fuzzysort.goAsync(query, resources.posts, {
-      keys: [ 'title' ],
+      keys: ['title'],
       threshold: -3500,
       allowTypo: false
     }))
