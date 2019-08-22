@@ -44,7 +44,7 @@ const setup = () => {
             afterDisplay: results => {
               if (results.total !== 0) return false
               if (!inputElement.value) return false
-              resultElement.innerHTML = `<span class="dropdown-item disabled">${inputElement.dataset['empty']}</span>`
+              resultElement.innerHTML = `<span class="dropdown-item disabled">${inputElement.dataset.empty}</span>`
             }
           }
         })
