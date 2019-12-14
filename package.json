@@ -43,7 +43,7 @@
     }
   },
   "dependencies": {
-    "bootstrap": "4.4.0",
+    "bootstrap": "4.4.1",
     "open-color": "1.7.0"
   },
   "devDependencies": {
