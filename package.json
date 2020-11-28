@@ -65,7 +65,7 @@
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "8.0.0",
     "gulp-sass": "4.0.2",
-    "gulp-sourcemaps": "2.6.5",
+    "gulp-sourcemaps": "3.0.0",
     "gulp-uglify": "3.0.2",
     "gulp-zip": "5.0.1",
     "standard": "14.3.1"
